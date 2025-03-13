@@ -18,9 +18,9 @@ export default function ChatButton() {
         <Button
           onClick={() => setOpen(true)}
           size="lg"
-          className="rounded-full w-20 h-20 bg-[#222831] hover:bg-[#393E46] shadow-lg text-white" // Dark space theme colors
+          className="rounded-full w-60 h-60 bg-[#222831] hover:bg-[#393E46] shadow-lg text-white" // Dark space theme colors
         >
-          <MessageCircle className="h-8 w-8 text-white" />
+          <MessageCircle className="h-24 w-24 text-white" />
         </Button>
       </motion.div>
 
