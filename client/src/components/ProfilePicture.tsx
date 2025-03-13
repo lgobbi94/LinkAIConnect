@@ -2,8 +2,8 @@
 import { motion } from "framer-motion";
 
 export function ProfilePicture() {
-  // Using the attached image in the assets folder
-  const imageUrl = "/attached_assets/foto-lorenzo-gobbi-secsolutions.jpg";
+  // Using the image from the public assets folder
+  const imageUrl = "/assets/foto-lorenzo-gobbi-secsolutions.jpg";
 
   return (
     <motion.div
