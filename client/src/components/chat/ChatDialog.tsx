@@ -72,12 +72,15 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent className="w-[90vw] sm:w-[400px] h-[80vh] flex flex-col p-0">
-        <SheetHeader className="p-4 border-b">
-          <SheetTitle>{config?.aiName || "AI Assistant"}</SheetTitle>
+      <SheetContent className="w-[90vw] sm:w-[400px] h-[80vh] flex flex-col p-0 border-l-4 border-l-violet-600 bg-slate-900/90 backdrop-blur-lg">
+        <SheetHeader className="p-5 border-b border-violet-800/30 bg-slate-800/60">
+          <SheetTitle className="text-xl text-center font-space text-violet-300">Lorenzo Gobbi's AI Assistant</SheetTitle>
+          <p className="text-center text-slate-400 text-sm mt-1 font-space">
+            How can I help you today?
+          </p>
         </SheetHeader>
 
-        <ScrollArea className="flex-1 p-4">
+        <ScrollArea className="flex-1 p-4 bg-gradient-to-b from-slate-900/70 to-slate-900/90">
           <div className="space-y-4">
             {messages.map((message, i) => (
               <div

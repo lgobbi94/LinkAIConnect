@@ -1,52 +1,49 @@
+
 import { motion } from "framer-motion";
+import { getIconForSocialMedia } from "@/lib/icons";
 import type { Link } from "@shared/schema";
-import {
-  SiInstagram,
-  SiX,
-  SiLinkedin,
-  SiGithub,
-  SiYoutube
-} from "react-icons/si";
+import { Instagram, Linkedin, Twitter, Github, Youtube } from "lucide-react";
 
-interface LinkButtonProps {
+type Props = {
   link: Link;
-}
-
-const SOCIAL_ICONS: { [key: string]: JSX.Element } = {
-  Instagram: <SiInstagram className="w-5 h-5" />,
-  "Twitter/X": <SiX className="w-5 h-5" />,
-  LinkedIn: <SiLinkedin className="w-5 h-5" />,
-  GitHub: <SiGithub className="w-5 h-5" />,
-  YouTube: <SiYoutube className="w-5 h-5" />
 };
 
-const SOCIAL_COLORS: { [key: string]: string } = {
-  Instagram: "bg-gradient-to-r from-purple-500 via-pink-500 to-red-500",
-  "Twitter/X": "bg-black",
-  LinkedIn: "bg-[#0077B5]",
-  GitHub: "bg-[#333333]",
-  YouTube: "bg-[#FF0000]"
-};
+export default function LinkButton({ link }: Props) {
+  if (!link.enabled) return null;
 
-export default function LinkButton({ link }: LinkButtonProps) {
-  const icon = SOCIAL_ICONS[link.title];
-  const colorClass = SOCIAL_COLORS[link.title] || "bg-white/70";
+  const getIcon = () => {
+    const title = link.title.toLowerCase();
+    
+    if (title.includes("instagram")) return Instagram;
+    if (title.includes("linkedin")) return Linkedin;
+    if (title.includes("twitter") || title.includes("x")) return Twitter;
+    if (title.includes("github")) return Github;
+    if (title.includes("youtube")) return Youtube;
+    
+    // Default icon if no match
+    return getIconForSocialMedia(link.title);
+  };
+
+  const Icon = getIcon();
 
   return (
     <motion.a
       href={link.url}
       target="_blank"
       rel="noopener noreferrer"
-      whileHover={{ scale: 1.02 }}
+      className="flex items-center p-4 bg-slate-900/60 backdrop-blur-md rounded-xl 
+                 border border-violet-500/20 shadow-md hover:shadow-violet-500/20
+                 transition-all duration-300 hover:border-violet-500 hover:bg-slate-800/80"
+      whileHover={{ scale: 1.03, y: -2 }}
       whileTap={{ scale: 0.98 }}
-      className={`block w-full p-4 ${colorClass} backdrop-blur-sm rounded-2xl 
-                 shadow-lg hover:shadow-xl transition-all duration-300
-                 border border-white/20 cursor-pointer
-                 flex items-center justify-center gap-3
-                 font-medium text-white`}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
     >
-      {icon}
-      <span>{link.title}</span>
+      <div className="p-2 mr-4 rounded-lg bg-violet-600/20 text-violet-400">
+        <Icon size={22} />
+      </div>
+      <span className="font-space tracking-wide text-slate-300">{link.title}</span>
     </motion.a>
   );
 }
