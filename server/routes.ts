@@ -64,6 +64,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Chat endpoint with OpenAI integration
   app.post("/api/chat/message", async (req, res) => {
     try {
+      // Check if OpenAI API key is configured
+      if (!process.env.OPENAI_API_KEY) {
+        res.status(503).json({
+          message: "OpenAI API key is not configured. Please contact the administrator."
+        });
+        return;
+      }
+
       const { message } = req.body;
       if (!message) {
         res.status(400).json({ message: "Message is required" });
@@ -85,6 +93,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json({ message: aiResponse });
     } catch (err) {
       console.error('OpenAI API Error:', err);
+
+      // Handle authentication errors specifically
+      if (err instanceof Error && err.message.includes('Incorrect API key provided')) {
+        res.status(503).json({
+          message: "Invalid OpenAI API key. Please check your API key configuration."
+        });
+        return;
+      }
+
       res.status(500).json({ 
         message: "Failed to generate AI response. Please try again later." 
       });

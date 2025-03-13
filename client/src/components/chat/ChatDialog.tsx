@@ -48,11 +48,23 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
         { role: "assistant", content: data.message },
       ]);
     } catch (err) {
+      let errorMessage = "Failed to send message. Please try again.";
+
+      // Handle specific API configuration errors
+      if (err instanceof Error) {
+        if (err.message.includes('503')) {
+          errorMessage = "AI chat is currently unavailable. Please check the API configuration.";
+        }
+      }
+
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again.",
+        description: errorMessage,
         variant: "destructive",
       });
+
+      // Remove the pending user message if the request failed
+      setMessages((prev) => prev.slice(0, -1));
     } finally {
       setIsLoading(false);
     }
