@@ -4,6 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
+import { ProfilePicture } from "@/components/ProfilePicture";
 
 function Router() {
   return (
@@ -21,6 +22,9 @@ function App() {
         <div className="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-[-1]">
           <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-violet-700/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/3 left-1/3 w-72 h-72 bg-indigo-700/20 rounded-full blur-3xl"></div>
+        </div>
+        <div className="flex justify-center mb-8">
+          <ProfilePicture />
         </div>
         <Router />
       </div>

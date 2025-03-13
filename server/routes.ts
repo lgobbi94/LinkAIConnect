@@ -92,6 +92,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // LinkedIn profile image endpoint
+  app.get("/api/linkedin-profile-image", async (_req, res) => {
+    try {
+      // In a real implementation, you would use LinkedIn API with proper auth
+      // This is a placeholder with a sample image URL
+      // You would need to replace this with your actual LinkedIn profile image URL
+      const imageUrl = "https://media.licdn.com/dms/image/D4D03AQHqx9OxqE7t-A/profile-displayphoto-shrink_800_800/0/1685457850853?e=1716422400&v=beta&t=L_XfLmk-EcbSrVk8UJkZVA_9YDYdMXUcVUoqfQMOrFo";
+      
+      res.json({ imageUrl });
+    } catch (err) {
+      res.status(500).json({ message: "Failed to fetch LinkedIn profile image" });
+    }
+  });
+
   // Chat configuration
   app.get("/api/chat/config", async (_req, res) => {
     const config = await storage.getChatConfig();
