@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Mono&display=swap');
 
 @layer base {
   * {
@@ -11,9 +11,14 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    background-color: #0a0a16;
     background-image: 
-      radial-gradient(at 100% 100%, rgba(var(--primary-rgb)/0.15) 0px, transparent 50%),
-      radial-gradient(at 0% 0%, rgba(var(--primary-rgb)/0.1) 0px, transparent 50%);
+      radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 10px),
+      radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 5px),
+      radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 10px),
+      radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 5px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     background-attachment: fixed;
   }
 
@@ -23,9 +28,27 @@
 }
 
 :root {
-  --primary-rgb: 128, 90, 213;
+  --primary-rgb: 149, 104, 255;
 }
 
 .font-poppins {
   font-family: 'Poppins', sans-serif;
+}
+
+.font-space {
+  font-family: 'Space Mono', monospace;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.glow {
+  box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.5);
 }

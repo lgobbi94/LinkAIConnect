@@ -17,7 +17,11 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="container mx-auto px-4 max-w-md py-6">
+      <div className="container mx-auto px-4 max-w-md py-6 min-h-screen">
+        <div className="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-[-1]">
+          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-violet-700/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-72 h-72 bg-indigo-700/20 rounded-full blur-3xl"></div>
+        </div>
         <Router />
       </div>
       <Toaster />

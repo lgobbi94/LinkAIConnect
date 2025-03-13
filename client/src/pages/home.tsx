@@ -10,16 +10,21 @@ export default function Home() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-purple-50">
+    <div className="min-h-screen">
       <div className="max-w-lg mx-auto pt-20 px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <div className="w-28 h-28 rounded-full bg-gradient-to-br from-primary to-accent mx-auto mb-6 shadow-lg ring-4 ring-background/95" />
-          <h1 className="text-4xl font-bold text-[#2D2D2D] font-poppins bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Lorenzo Gobbi</h1>
-          <p className="text-muted-foreground mt-3 text-lg">Connect with me on social media</p>
+          <motion.div 
+            className="w-32 h-32 rounded-full bg-gradient-to-br from-violet-600 to-purple-800 mx-auto mb-6 shadow-lg ring-4 ring-violet-500/30 glow float"
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.8 }}
+          />
+          <h1 className="text-4xl font-bold font-poppins bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-violet-400 to-indigo-400">Lorenzo Gobbi</h1>
+          <p className="text-slate-400 mt-3 text-lg font-space tracking-wider">CONNECTING THROUGH SPACE</p>
         </motion.div>
 
         <div className="space-y-4">

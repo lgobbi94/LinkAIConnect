@@ -23,14 +23,16 @@ export function SocialButton({ title, url, icon: Icon, onClick }: SocialButtonPr
     >
       <Button
         onClick={handleClick}
-        className="w-full flex items-center justify-start gap-3 my-2 px-5 py-7 border-2 transition-all 
-                group hover:border-primary shadow-sm hover:shadow-md"
+        className="w-full flex items-center justify-start gap-4 my-2 px-5 py-7 
+                 bg-slate-900/60 backdrop-blur-md border border-violet-500/20 
+                 transition-all group hover:border-violet-500 hover:bg-slate-800/80
+                 shadow-md hover:shadow-violet-500/20"
         variant="outline"
       >
-        <span className="text-muted-foreground group-hover:text-primary transition-colors">
+        <span className="text-violet-400 group-hover:text-violet-300 transition-colors">
           <Icon size={22} />
         </span>
-        <span className="font-medium group-hover:text-primary transition-colors">{title}</span>
+        <span className="font-space tracking-wide group-hover:text-violet-300 transition-colors">{title}</span>
       </Button>
     </motion.div>
   )
