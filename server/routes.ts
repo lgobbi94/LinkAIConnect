@@ -3,6 +3,11 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertLinkSchema } from "@shared/schema";
 import { z } from "zod";
+import OpenAI from "openai";
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Links CRUD
@@ -56,16 +61,34 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.json(config);
   });
 
-  // Chat endpoint
+  // Chat endpoint with OpenAI integration
   app.post("/api/chat/message", async (req, res) => {
-    const { message } = req.body;
-    if (!message) {
-      res.status(400).json({ message: "Message is required" });
-      return;
-    }
+    try {
+      const { message } = req.body;
+      if (!message) {
+        res.status(400).json({ message: "Message is required" });
+        return;
+      }
 
-    // TODO: Integrate with Entropic API
-    res.status(501).json({ message: "Chat functionality not yet implemented" });
+      const config = await storage.getChatConfig();
+
+      const completion = await openai.chat.completions.create({
+        model: "gpt-3.5-turbo",
+        messages: [
+          { role: "system", content: config.systemPrompt },
+          { role: "user", content: message }
+        ],
+        max_tokens: 150
+      });
+
+      const aiResponse = completion.choices[0]?.message?.content || "I apologize, but I couldn't generate a response.";
+      res.json({ message: aiResponse });
+    } catch (err) {
+      console.error('OpenAI API Error:', err);
+      res.status(500).json({ 
+        message: "Failed to generate AI response. Please try again later." 
+      });
+    }
   });
 
   const httpServer = createServer(app);
