@@ -3,7 +3,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Send } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import type { ChatConfig } from "@shared/schema";
 import { apiRequest } from "@/lib/queryClient";
@@ -22,6 +22,7 @@ interface Message {
 export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
   const { data: config } = useQuery<ChatConfig>({
@@ -29,18 +30,19 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
   });
 
   async function handleSend() {
-    if (!input.trim()) return;
+    if (!input.trim() || isLoading) return;
 
     const userMessage = { role: "user" as const, content: input };
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
+    setIsLoading(true);
 
     try {
       const res = await apiRequest("POST", "/api/chat/message", {
         message: input,
       });
       const data = await res.json();
-      
+
       setMessages((prev) => [
         ...prev,
         { role: "assistant", content: data.message },
@@ -48,9 +50,11 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
     } catch (err) {
       toast({
         title: "Error",
-        description: "Failed to send message",
+        description: "Failed to send message. Please try again.",
         variant: "destructive",
       });
+    } finally {
+      setIsLoading(false);
     }
   }
 
@@ -88,12 +92,21 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && handleSend()}
+            onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && handleSend()}
             placeholder="Type a message..."
             className="flex-1"
+            disabled={isLoading}
           />
-          <Button onClick={handleSend} size="icon">
-            <Send className="h-4 w-4" />
+          <Button 
+            onClick={handleSend} 
+            size="icon"
+            disabled={isLoading}
+          >
+            {isLoading ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <Send className="h-4 w-4" />
+            )}
           </Button>
         </div>
       </SheetContent>
