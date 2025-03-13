@@ -30,6 +30,23 @@ try {
 }
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Add default social media links
+  const defaultLinks = [
+    { title: "Instagram", url: "https://instagram.com/yourusername", enabled: true },
+    { title: "Twitter/X", url: "https://twitter.com/yourusername", enabled: true },
+    { title: "LinkedIn", url: "https://linkedin.com/in/yourusername", enabled: true },
+    { title: "GitHub", url: "https://github.com/yourusername", enabled: true },
+    { title: "YouTube", url: "https://youtube.com/@yourusername", enabled: true }
+  ];
+
+  // Initialize links if none exist
+  const existingLinks = await storage.getLinks();
+  if (existingLinks.length === 0) {
+    for (const link of defaultLinks) {
+      await storage.createLink(link);
+    }
+  }
+
   // Links CRUD
   app.get("/api/links", async (_req, res) => {
     const links = await storage.getLinks();
