@@ -5,9 +5,29 @@ import { insertLinkSchema } from "@shared/schema";
 import { z } from "zod";
 import OpenAI from "openai";
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// Initialize OpenAI with environment variable
+let openai: OpenAI | null = null;
+try {
+  if (!process.env.OPENAI_API_KEY) {
+    console.error("OpenAI API key is not configured");
+  } else {
+    // Log API key format check (safely)
+    const key = process.env.OPENAI_API_KEY;
+    console.log("API Key format check:", {
+      length: key.length,
+      prefix: key.startsWith("sk-"),
+      firstFour: key.slice(0, 4),
+      lastFour: key.slice(-4)
+    });
+
+    openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+    console.log("OpenAI client initialized successfully");
+  }
+} catch (err) {
+  console.error("Failed to initialize OpenAI client:", err);
+}
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Links CRUD
@@ -65,7 +85,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/chat/message", async (req, res) => {
     try {
       // Check if OpenAI API key is configured
-      if (!process.env.OPENAI_API_KEY) {
+      if (!process.env.OPENAI_API_KEY || !openai) {
         res.status(503).json({
           message: "OpenAI API key is not configured. Please contact the administrator."
         });
@@ -79,6 +99,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       const config = await storage.getChatConfig();
+      console.log("Attempting OpenAI API call with message length:", message.length);
 
       const completion = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
