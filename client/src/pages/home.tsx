@@ -19,12 +19,12 @@ export default function Home() {
         >
           <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#6C63FF] to-[#FF6B6B] mx-auto mb-4" />
           <h1 className="text-3xl font-bold text-[#2D2D2D] font-poppins">Your Name</h1>
-          <p className="text-[#333333] mt-2">Your Bio Goes Here</p>
+          <p className="text-[#333333] mt-2">Connect with me on social media</p>
         </motion.div>
 
         <div className="space-y-4">
           {isLoading ? (
-            Array.from({ length: 3 }).map((_, i) => (
+            Array.from({ length: 5 }).map((_, i) => (
               <div
                 key={i}
                 className="h-14 bg-white/50 backdrop-blur-sm animate-pulse rounded-2xl"
