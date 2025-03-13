@@ -118,30 +118,40 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const config = await storage.getChatConfig();
       console.log("Attempting OpenAI API call with message length:", message.length);
 
-      const completion = await openai.chat.completions.create({
-        model: "gpt-3.5-turbo",
-        messages: [
-          { role: "system", content: config.systemPrompt },
-          { role: "user", content: message }
-        ],
-        max_tokens: 150
-      });
-
-      const aiResponse = completion.choices[0]?.message?.content || "I apologize, but I couldn't generate a response.";
-      res.json({ message: aiResponse });
-    } catch (err) {
-      console.error('OpenAI API Error:', err);
-
-      // Handle authentication errors specifically
-      if (err instanceof Error && err.message.includes('Incorrect API key provided')) {
-        res.status(503).json({
-          message: "Invalid OpenAI API key. Please check your API key configuration."
+      try {
+        const completion = await openai.chat.completions.create({
+          model: "gpt-3.5-turbo",
+          messages: [
+            { role: "system", content: config.systemPrompt },
+            { role: "user", content: message }
+          ],
+          max_tokens: 150
         });
-        return;
-      }
 
+        const aiResponse = completion.choices[0]?.message?.content || "I apologize, but I couldn't generate a response.";
+        res.json({ message: aiResponse });
+      } catch (apiError) {
+        console.error('OpenAI API Error:', apiError);
+        
+        // More detailed error handling for OpenAI API errors
+        if (apiError.status === 401 || (apiError instanceof Error && apiError.message.includes('API key'))) {
+          res.status(503).json({
+            message: "Invalid OpenAI API key. Please check your API key configuration."
+          });
+        } else if (apiError.status === 429) {
+          res.status(503).json({
+            message: "Rate limit exceeded for OpenAI API. Please try again later."
+          });
+        } else {
+          res.status(500).json({ 
+            message: "Failed to generate AI response. Please try again later." 
+          });
+        }
+      }
+    } catch (err) {
+      console.error('Server error handling chat request:', err);
       res.status(500).json({ 
-        message: "Failed to generate AI response. Please try again later." 
+        message: "An unexpected error occurred. Please try again later." 
       });
     }
   });
