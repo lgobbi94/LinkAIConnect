@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import LinkButton from "@/components/linktree/LinkButton";
 import ChatButton from "@/components/chat/ChatButton";
 import type { Link } from "@shared/schema";
+import { ProfilePicture } from "@/components/ProfilePicture"; // Added import
 
 export default function Home() {
   const { data: links, isLoading } = useQuery<Link[]>({
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <div className="max-w-lg mx-auto pt-20 px-4">
+        <ProfilePicture /> {/* Added ProfilePicture component */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -23,7 +23,6 @@ function App() {
           <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-violet-700/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/3 left-1/3 w-72 h-72 bg-indigo-700/20 rounded-full blur-3xl"></div>
         </div>
-        <ProfilePicture />
         <Router />
       </div>
       <Toaster />
