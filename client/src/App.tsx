@@ -17,7 +17,9 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router />
+      <div className="container mx-auto px-4 max-w-md py-6">
+        <Router />
+      </div>
       <Toaster />
     </QueryClientProvider>
   );

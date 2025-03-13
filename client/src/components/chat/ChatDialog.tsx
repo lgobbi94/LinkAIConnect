@@ -72,9 +72,12 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent className="w-[90vw] sm:w-[400px] h-[80vh] flex flex-col p-0">
-        <SheetHeader className="p-4 border-b">
-          <SheetTitle>Lorenzo Gobbi's AI Assistant</SheetTitle> {/*Updated Name Here*/}
+      <SheetContent className="w-[90vw] sm:w-[400px] h-[80vh] flex flex-col p-0 border-l-4 border-l-primary">
+        <SheetHeader className="p-5 border-b bg-muted/30">
+          <SheetTitle className="text-xl text-center">Lorenzo Gobbi's AI Assistant</SheetTitle>
+          <p className="text-center text-muted-foreground text-sm mt-1">
+            How can I help you today?
+          </p>
         </SheetHeader>
 
         <ScrollArea className="flex-1 p-4">
