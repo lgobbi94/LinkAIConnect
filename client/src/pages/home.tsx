@@ -19,12 +19,6 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <motion.div 
-            className="w-32 h-32 rounded-full bg-gradient-to-br from-violet-600 to-purple-800 mx-auto mb-6 shadow-lg ring-4 ring-violet-500/30 glow float"
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.8 }}
-          />
           <h1 className="text-4xl font-bold font-poppins bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-violet-400 to-indigo-400">Lorenzo Gobbi</h1>
           <p className="text-slate-400 mt-3 text-lg font-space tracking-wider">CONNECTING THROUGH SPACE</p>
         </motion.div>
