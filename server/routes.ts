@@ -32,9 +32,9 @@ try {
 export async function registerRoutes(app: Express): Promise<Server> {
   // Add default social media links
   const defaultLinks = [
-    { title: "Instagram", url: "https://instagram.com/lorenzogobbi", enabled: true },
+    { title: "Instagram", url: "https://instagram.com/enzodegabbi", enabled: true },
     { title: "Twitter/X", url: "https://twitter.com/lorenzogobbi", enabled: true },
-    { title: "LinkedIn", url: "https://linkedin.com/in/lorenzogobbi", enabled: true },
+    { title: "LinkedIn", url: "https://linkedin.com/in/lorenzo-gobbi-72ab34335", enabled: true },
     { title: "GitHub", url: "https://github.com/lorenzogobbi", enabled: true },
     { title: "YouTube", url: "https://youtube.com/@lorenzogobbi", enabled: true }
   ];
