@@ -74,7 +74,7 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent className="w-[90vw] sm:w-[400px] h-[80vh] flex flex-col p-0">
         <SheetHeader className="p-4 border-b">
-          <SheetTitle>{config?.aiName || "AI Assistant"}</SheetTitle>
+          <SheetTitle>Lorenzo Gobbi's AI Assistant</SheetTitle> {/*Updated Name Here*/}
         </SheetHeader>
 
         <ScrollArea className="flex-1 p-4">

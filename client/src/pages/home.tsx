@@ -18,7 +18,7 @@ export default function Home() {
           className="text-center mb-12"
         >
           <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#6C63FF] to-[#FF6B6B] mx-auto mb-4" />
-          <h1 className="text-3xl font-bold text-[#2D2D2D] font-poppins">Your Name</h1>
+          <h1 className="text-3xl font-bold text-[#2D2D2D] font-poppins">Lorenzo Gobbi</h1>
           <p className="text-[#333333] mt-2">Connect with me on social media</p>
         </motion.div>
 
