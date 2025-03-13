@@ -11,8 +11,8 @@ export default function Home() {
   });
 
   return (
-    <div className="min-h-screen overflow-hidden">
-      <div className="max-w-lg mx-auto pt-20 px-4 pb-36">
+    <div className="min-h-screen">
+      <div className="max-w-lg mx-auto pt-20 px-4">
         <ProfilePicture /> {/* Added ProfilePicture component */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
