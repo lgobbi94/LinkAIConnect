@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Sheet,
   SheetContent,
@@ -74,6 +74,14 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
     }
   }
 
+  const scrollAreaRef = useRef(null);
+
+  useEffect(() => {
+    if (scrollAreaRef.current) {
+      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
+    }
+  }, [messages]);
+
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent className="w-full sm:w-[400px] h-[75vh] flex flex-col p-0 border-l-4 border-l-violet-600 bg-slate-900/90 backdrop-blur-lg">
@@ -86,7 +94,7 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
           </p>
         </SheetHeader>
 
-        <ScrollArea className="flex-1 p-4 bg-gradient-to-b from-slate-900/70 to-slate-900/90 overflow-auto">
+        <ScrollArea ref={scrollAreaRef} className="flex-1 min-h-0 p-4 bg-gradient-to-b from-slate-900/70 to-slate-900/90 overflow-auto">
           <div className="space-y-4">
             {messages.map((message, i) => (
               <div
@@ -94,7 +102,7 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
                 className={`flex ${message.role === "assistant" ? "justify-start" : "justify-end"}`}
               >
                 <div
-                  className={`max-w-[80%] p-3 rounded-2xl ${message.role === "assistant" ? "bg-gray-100 text-gray-800" : "bg-[#6C63FF] text-white"}`}
+                  className={`max-w-[80%] p-3 rounded-2xl ${message.role === "assistant" ? "bg-gray-200 text-gray-900" : "bg-blue-600 text-white"}`}
                 >
                   {message.content}
                 </div>
@@ -103,16 +111,15 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
           </div>
         </ScrollArea>
 
-        <div className="p-4 border-t flex gap-2">
+        <div className="p-4 border-t bg-gray-800 flex gap-2">
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && handleSend()}
             placeholder="Type a message..."
-            className="flex-1"
+            className="flex-1 bg-gray-700 border-none text-white placeholder-gray-400"
             disabled={isLoading}
           />
-          <Button onClick={handleSend} size="icon" disabled={isLoading}>
+          <Button onClick={handleSend} size="icon" className="bg-blue-600 hover:bg-blue-700 text-white" disabled={isLoading}>
             {isLoading ? (
               <Loader2 className="h-4 w-4 animate-spin" />
             ) : (
