@@ -1,4 +1,9 @@
 import type { Express } from "express";
+import { fileURLToPath } from 'url';  // Import this to simulate __dirname
+
+// Create a __dirname equivalent
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 import path from 'path';
 import fs from 'fs';
