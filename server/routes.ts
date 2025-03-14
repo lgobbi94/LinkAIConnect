@@ -132,6 +132,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return;
       }
 
+      const pdfText = await getPdfContent(); // Retrieve PDF content
+
       const config = await storage.getChatConfig();
       console.log(
         "Attempting OpenAI API call with message length:",
