@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import LinkButton from "@/components/linktree/LinkButton";
 import ChatButton from "@/components/chat/ChatButton";
 import type { Link } from "@shared/schema";
@@ -10,7 +11,27 @@ export default function Home() {
     queryKey: ["/api/links"],
   });
 
-  const words = ["AI", "Machine Learning", "Innovation", "Technology"];
+  // AI-related words for random generation
+  const aiWords = [
+    "AI", "Machine Learning", "Neural Networks", "Deep Learning", 
+    "Algorithms", "Data Science", "Robotics", "Automation", 
+    "Natural Language", "Computer Vision", "Chatbots", "Innovation", 
+    "Technology", "Artificial", "Intelligence", "Future", 
+    "Cognition", "Learning", "Prediction", "Analytics"
+  ];
+
+  // Random word generation state
+  const [currentWord, setCurrentWord] = useState<string>(aiWords[0]);
+  
+  // Effect for changing words every 0.5 seconds
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * aiWords.length);
+      setCurrentWord(aiWords[randomIndex]);
+    }, 500);
+    
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="min-h-screen overflow-auto">
@@ -29,35 +50,26 @@ export default function Home() {
           </p>
         </motion.div>
 
-        {/* Enhanced AI Animation Section */}
+        {/* Enhanced AI Animation Section with random word generation */}
         <motion.div
-          className="flex justify-center items-center mb-12 overflow-hidden"
+          className="flex justify-center items-center mb-12 bg-gradient-to-r from-purple-900/30 to-blue-900/30 py-8 rounded-xl backdrop-blur-sm"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
         >
-          <motion.div
-            className="flex justify-center w-full"
-            initial={{ x: "100%" }}
-            animate={{ x: "-100%" }}
-            transition={{ repeat: Infinity, duration: 8, ease: "linear" }}
-          >
-            {words.map((word, index) => (
-              <motion.div
-                key={index}
-                className="mx-8 text-white font-bold text-2xl"
-                initial={{ scale: 0.8, rotate: 0 }}
-                animate={{ scale: 1.2, rotate: 360 }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 4,
-                  ease: "easeInOut",
-                }}
-              >
-                {word}
-              </motion.div>
-            ))}
-          </motion.div>
+          <div className="flex flex-col items-center justify-center">
+            <p className="text-slate-400 mb-2 text-sm">AI CONCEPT GENERATOR</p>
+            <motion.div
+              key={currentWord}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500"
+            >
+              {currentWord}
+            </motion.div>
+          </div>
         </motion.div>
 
         <div className="space-y-4">
