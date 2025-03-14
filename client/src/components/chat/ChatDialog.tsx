@@ -58,6 +58,7 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
       let errorMessage = "Failed to send message. Please try again.";
       if (err instanceof Error) {
         if (err.message.includes("503")) {
+
           errorMessage =
             "AI chat is currently unavailable. Please check the API configuration.";
         }
