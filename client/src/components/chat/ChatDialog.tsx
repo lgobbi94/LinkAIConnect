@@ -102,7 +102,7 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
                 className={`flex ${message.role === "assistant" ? "justify-start" : "justify-end"}`}
               >
                 <div
-                  className={`max-w-[80%] p-3 rounded-2xl ${message.role === "assistant" ? "bg-gray-100 text-gray-800" : "bg-[#6C63FF] text-white"}`}
+                  className={`max-w-[80%] p-3 rounded-2xl ${message.role === "assistant" ? "bg-gray-200 text-gray-900" : "bg-blue-600 text-white"}`}
                 >
                   {message.content}
                 </div>
@@ -111,16 +111,15 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
           </div>
         </ScrollArea>
 
-        <div className="p-4 border-t flex gap-2">
+        <div className="p-4 border-t bg-gray-800 flex gap-2">
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && handleSend()}
             placeholder="Type a message..."
-            className="flex-1"
+            className="flex-1 bg-gray-700 border-none text-white placeholder-gray-400"
             disabled={isLoading}
           />
-          <Button onClick={handleSend} size="icon" disabled={isLoading}>
+          <Button onClick={handleSend} size="icon" className="bg-blue-600 hover:bg-blue-700 text-white" disabled={isLoading}>
             {isLoading ? (
               <Loader2 className="h-4 w-4 animate-spin" />
             ) : (
