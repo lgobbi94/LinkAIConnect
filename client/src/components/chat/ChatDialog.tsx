@@ -24,15 +24,6 @@ interface Message {
   content: string;
 }
 
-  const scrollAreaRef = useRef(null);
-
-  useEffect(() => {
-    if (scrollAreaRef.current) {
-      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
-    }
-  }, [messages]);
-
-
 export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
@@ -82,6 +73,14 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
       setIsLoading(false);
     }
   }
+
+  const scrollAreaRef = useRef(null);
+
+  useEffect(() => {
+    if (scrollAreaRef.current) {
+      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
+    }
+  }, [messages]);
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
