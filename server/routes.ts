@@ -6,7 +6,7 @@ import pdf from 'pdf-parse';
 
 async function getPdfContent() {
   // Assuming the PDF file is located in the 'attached_assets' directory
-  const pdfPath = path.join(__dirname, '../attached_assets/example.pdf');
+  const pdfPath = path.join(__dirname, '../attached_assets/05-versions-space.pdf');
   const dataBuffer = fs.readFileSync(pdfPath);
   try {
     const data = await pdf(dataBuffer);
