@@ -17,7 +17,7 @@ try {
       length: key.length,
       prefix: key.startsWith("sk-"),
       firstFour: key.slice(0, 4),
-      lastFour: key.slice(-4)
+      lastFour: key.slice(-4),
     });
 
     openai = new OpenAI({
@@ -32,11 +32,27 @@ try {
 export async function registerRoutes(app: Express): Promise<Server> {
   // Add default social media links
   const defaultLinks = [
-    { title: "Instagram", url: "https://instagram.com/enzodegabbi", enabled: true },
-    { title: "Twitter/X", url: "https://twitter.com/lorenzogobbi", enabled: true },
-    { title: "LinkedIn", url: "https://linkedin.com/in/lorenzo-gobbi-72ab34335", enabled: true },
+    {
+      title: "Instagram",
+      url: "https://instagram.com/enzodegabbi",
+      enabled: true,
+    },
+    {
+      title: "Twitter/X",
+      url: "https://twitter.com/lorenzogobbi",
+      enabled: true,
+    },
+    {
+      title: "LinkedIn",
+      url: "https://linkedin.com/in/lorenzo-gobbi-72ab34335",
+      enabled: true,
+    },
     { title: "GitHub", url: "https://github.com/lorenzogobbi", enabled: true },
-    { title: "YouTube", url: "https://youtube.com/@lorenzogobbi", enabled: true }
+    {
+      title: "YouTube",
+      url: "https://youtube.com/@lorenzogobbi",
+      enabled: true,
+    },
   ];
 
   // Initialize links if none exist
@@ -104,7 +120,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Check if OpenAI API key is configured
       if (!process.env.OPENAI_API_KEY || !openai) {
         res.status(503).json({
-          message: "OpenAI API key is not configured. Please contact the administrator."
+          message:
+            "OpenAI API key is not configured. Please contact the administrator.",
         });
         return;
       }
@@ -116,32 +133,41 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       const config = await storage.getChatConfig();
-      console.log("Attempting OpenAI API call with message length:", message.length);
+      console.log(
+        "Attempting OpenAI API call with message length:",
+        message.length,
+      );
 
       const completion = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
         messages: [
           { role: "system", content: config.systemPrompt },
-          { role: "user", content: message }
+          { role: "user", content: message },
         ],
-        max_tokens: 150
+        max_tokens: 150,
       });
 
-      const aiResponse = completion.choices[0]?.message?.content || "I apologize, but I couldn't generate a response.";
+      const aiResponse =
+        completion.choices[0]?.message?.content ||
+        "I apologize, but I couldn't generate a response.";
       res.json({ message: aiResponse });
     } catch (err) {
-      console.error('OpenAI API Error:', err);
+      console.error("OpenAI API Error:", err);
 
       // Handle authentication errors specifically
-      if (err instanceof Error && err.message.includes('Incorrect API key provided')) {
+      if (
+        err instanceof Error &&
+        err.message.includes("Incorrect API key provided")
+      ) {
         res.status(503).json({
-          message: "Invalid OpenAI API key. Please check your API key configuration."
+          message:
+            "Invalid OpenAI API key. Please check your API key configuration.",
         });
         return;
       }
 
-      res.status(500).json({ 
-        message: "Failed to generate AI response. Please try again later." 
+      res.status(500).json({
+        message: "Failed to generate AI response. Please try again later.",
       });
     }
   });

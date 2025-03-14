@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -25,10 +30,12 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
+  // API config query
   const { data: config } = useQuery<ChatConfig>({
     queryKey: ["/api/chat/config"],
   });
 
+  // Function to handle message sending
   async function handleSend() {
     if (!input.trim() || isLoading) return;
 
@@ -49,21 +56,17 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
       ]);
     } catch (err) {
       let errorMessage = "Failed to send message. Please try again.";
-
-      // Handle specific API configuration errors
       if (err instanceof Error) {
-        if (err.message.includes('503')) {
-          errorMessage = "AI chat is currently unavailable. Please check the API configuration.";
+        if (err.message.includes("503")) {
+          errorMessage =
+            "AI chat is currently unavailable. Please check the API configuration.";
         }
       }
-
       toast({
         title: "Error",
         description: errorMessage,
         variant: "destructive",
       });
-
-      // Remove the pending user message if the request failed
       setMessages((prev) => prev.slice(0, -1));
     } finally {
       setIsLoading(false);
@@ -74,7 +77,9 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent className="w-[90vw] sm:w-[400px] h-[80vh] flex flex-col p-0 border-l-4 border-l-violet-600 bg-slate-900/90 backdrop-blur-lg">
         <SheetHeader className="p-5 border-b border-violet-800/30 bg-slate-800/60">
-          <SheetTitle className="text-xl text-center font-space text-violet-300">Lorenzo Gobbi's AI Assistant</SheetTitle>
+          <SheetTitle className="text-xl text-center font-space text-violet-300">
+            Lorenzo Gobbi's AI Assistant
+          </SheetTitle>
           <p className="text-center text-slate-400 text-sm mt-1 font-space">
             How can I help you today?
           </p>
@@ -85,16 +90,10 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
             {messages.map((message, i) => (
               <div
                 key={i}
-                className={`flex ${
-                  message.role === "assistant" ? "justify-start" : "justify-end"
-                }`}
+                className={`flex ${message.role === "assistant" ? "justify-start" : "justify-end"}`}
               >
                 <div
-                  className={`max-w-[80%] p-3 rounded-2xl ${
-                    message.role === "assistant"
-                      ? "bg-gray-100"
-                      : "bg-[#6C63FF] text-white"
-                  }`}
+                  className={`max-w-[80%] p-3 rounded-2xl ${message.role === "assistant" ? "bg-gray-100 text-gray-800" : "bg-[#6C63FF] text-white"}`}
                 >
                   {message.content}
                 </div>
@@ -112,11 +111,7 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
             className="flex-1"
             disabled={isLoading}
           />
-          <Button 
-            onClick={handleSend} 
-            size="icon"
-            disabled={isLoading}
-          >
+          <Button onClick={handleSend} size="icon" disabled={isLoading}>
             {isLoading ? (
               <Loader2 className="h-4 w-4 animate-spin" />
             ) : (
