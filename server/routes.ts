@@ -1,4 +1,22 @@
 import type { Express } from "express";
+
+import path from 'path';
+import fs from 'fs';
+import pdf from 'pdf-parse';
+
+async function getPdfContent() {
+  // Assuming the PDF file is located in the 'attached_assets' directory
+  const pdfPath = path.join(__dirname, '../attached_assets/05-versions-space.pdf');
+  const dataBuffer = fs.readFileSync(pdfPath);
+  try {
+    const data = await pdf(dataBuffer);
+    return data.text;
+  } catch (error) {
+    console.error('Failed to read PDF:', error);
+    return 'Could not read PDF content.';
+  }
+}
+
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertLinkSchema } from "@shared/schema";
@@ -131,6 +149,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         res.status(400).json({ message: "Message is required" });
         return;
       }
+
+      const pdfText = await getPdfContent(); // Retrieve PDF content
 
       const config = await storage.getChatConfig();
       console.log(
