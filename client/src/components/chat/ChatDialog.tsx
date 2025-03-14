@@ -85,7 +85,7 @@ export default function ChatDialog({ open, onOpenChange }: ChatDialogProps) {
           </p>
         </SheetHeader>
 
-        <ScrollArea className="flex-1 p-4 bg-gradient-to-b from-slate-900/70 to-slate-900/90">
+        <ScrollArea className="flex-1 p-4 bg-gradient-to-b from-slate-900/70 to-slate-900/90 overflow-auto">
           <div className="space-y-4">
             {messages.map((message, i) => (
               <div
