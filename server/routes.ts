@@ -168,6 +168,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         messages: [
           { role: "system", content: config.systemPrompt },
           { role: "user", content: message },
+          { role: "system", content: `Here is some information from the PDF: ${pdfText}` },
         ],
         max_tokens: 150,
       });
