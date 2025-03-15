@@ -105,13 +105,15 @@ export default function Home() {
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentWord}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
+                    initial={{ z: -600, y: 150, scale: 0.2, opacity: 0, rotateX: 35 }}
+                    animate={{ z: 0, y: 0, scale: 1, opacity: 1, rotateX: 15 }}
+                    exit={{ z: 300, y: -150, scale: 0.2, opacity: 0, rotateX: -15 }}
                     transition={{ 
-                      duration: 0.5 
+                      duration: 4, 
+                      ease: [0.1, 0.3, 0.5, 1],
+                      opacity: { duration: 3 }
                     }}
-                    className="text-3xl cosmic-text text-center transform-3d"
+                    className="text-5xl font-bold font-space text-center transform-3d cosmic-text force-glow"
                     style={{ 
                       transformStyle: "preserve-3d", 
                       willChange: "transform, opacity",
