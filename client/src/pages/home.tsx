@@ -11,38 +11,38 @@ export default function Home() {
     queryKey: ["/api/links"],
   });
 
-  // AI-related words for random generation
-  const aiWords = [
-    "AI",
-    "Machine Learning",
-    "Neural Networks",
-    "Deep Learning",
-    "Algorithms",
-    "Data Science",
-    "Robotics",
-    "Automation",
-    "Natural Language",
-    "Computer Vision",
-    "Chatbots",
-    "Innovation",
-    "Technology",
-    "Artificial",
-    "Intelligence",
-    "Future",
-    "Cognition",
-    "Learning",
-    "Prediction",
-    "Analytics",
+  // Star Wars and AI-related words for random generation
+  const starWarsAiWords = [
+    "THE FORCE",
+    "JEDI INTELLIGENCE",
+    "DROID LEARNING",
+    "GALACTIC NETWORKS",
+    "REBEL ALGORITHMS",
+    "HYPERSPACE DATA",
+    "IMPERIAL ROBOTICS",
+    "LIGHT SPEED AUTOMATION",
+    "WOOKIEE LANGUAGE",
+    "HOLOGRAM VISION",
+    "PROTOCOL DROIDS",
+    "TATOOINE INNOVATION",
+    "KYBER TECHNOLOGY",
+    "ARTIFICIAL REBELS",
+    "MANDALORIAN INTELLIGENCE",
+    "STAR DESTROYER FUTURE",
+    "CLONE COGNITION",
+    "SITH LEARNING",
+    "JEDI PREDICTION",
+    "CANTINA ANALYTICS",
   ];
 
   // Random word generation state
-  const [currentWord, setCurrentWord] = useState<string>(aiWords[0]);
+  const [currentWord, setCurrentWord] = useState<string>(starWarsAiWords[0]);
 
-  // Effect for changing words every 0.5 seconds
+  // Effect for changing words every 4 seconds
   React.useEffect(() => {
     const interval = setInterval(() => {
-      const randomIndex = Math.floor(Math.random() * aiWords.length);
-      setCurrentWord(aiWords[randomIndex]);
+      const randomIndex = Math.floor(Math.random() * starWarsAiWords.length);
+      setCurrentWord(starWarsAiWords[randomIndex]);
     }, 4000);
 
     return () => clearInterval(interval);
@@ -65,25 +65,33 @@ export default function Home() {
           </p>
         </motion.div>
 
-        {/* Enhanced AI Animation Section with random word generation */}
+        {/* Star Wars Style AI Animation Section */}
         <motion.div
-          className="flex justify-center items-center mb-12 bg-gradient-to-r from-purple-900/30 to-blue-900/30 py-8 rounded-xl backdrop-blur-sm"
+          className="flex justify-center items-center mb-12 bg-gradient-to-r from-purple-900/30 to-blue-900/30 py-12 rounded-xl backdrop-blur-sm perspective-500 overflow-hidden"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 3, ease: "easeInOut" }}
         >
           <div className="flex flex-col items-center justify-center">
             <p className="text-slate-400 mb-2 text-sm">AI CONCEPT GENERATOR</p>
-            <motion.div
-              key={currentWord}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 2, ease: "easeInOut" }}
-              className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500"
-            >
-              {currentWord}
-            </motion.div>
+            <div className="h-32 w-full max-w-xs overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentWord}
+                  initial={{ y: 100, rotateX: 30, opacity: 0 }}
+                  animate={{ y: 0, rotateX: 30, opacity: 1 }}
+                  exit={{ y: -100, rotateX: 30, opacity: 0 }}
+                  transition={{ duration: 2, ease: "easeInOut" }}
+                  className="text-3xl font-bold font-space text-center text-yellow-400 transform-gpu"
+                  style={{ 
+                    transformStyle: "preserve-3d", 
+                    transform: "perspective(500px) rotateX(30deg)"
+                  }}
+                >
+                  {currentWord}
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
         </motion.div>
 

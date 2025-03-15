@@ -71,3 +71,34 @@
 .glow {
   box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.5);
 }
+
+.perspective-500 {
+  perspective: 500px;
+}
+
+.transform-gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+@keyframes starWarsFloat {
+  0% {
+    transform: perspective(500px) rotateX(30deg) translateY(100px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(500px) rotateX(30deg) translateY(-100px);
+    opacity: 0;
+  }
+}
+
+.star-wars-text {
+  animation: starWarsFloat 4s ease-out forwards;
+  transform-style: preserve-3d;
+}
