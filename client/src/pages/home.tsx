@@ -74,13 +74,13 @@ export default function Home() {
         >
           <div className="flex flex-col items-center justify-center w-full relative">
             <motion.p 
-              className="text-slate-300 mb-4 text-sm font-space tracking-widest glow-text"
+              className="text-cyan-200 mb-4 text-sm font-space tracking-widest glow-text"
               animate={{ opacity: [0.7, 1, 0.7] }}
               transition={{ duration: 4, repeat: Infinity }}
             >
               GALACTIC AI CONCEPT GENERATOR
             </motion.p>
-            
+
             {/* Stars background */}
             <div className="stars-container">
               {[...Array(50)].map((_, i) => (
@@ -99,7 +99,7 @@ export default function Home() {
               <div className="nebula-1"></div>
               <div className="nebula-2"></div>
             </div>
-            
+
             <div className="h-60 w-full relative cosmic-scene max-w-md">
               <div className="absolute inset-0 flex items-center justify-center">
                 <AnimatePresence mode="wait">

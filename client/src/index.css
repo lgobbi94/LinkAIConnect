@@ -112,14 +112,14 @@
 }
 
 .cosmic-text {
-  background: linear-gradient(to bottom, #ffe259 0%, #ffb845 100%);
+  background: linear-gradient(to bottom, #64e5ff 0%, #5271ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: pulseGlow 3s infinite alternate ease-in-out;
 }
 
 .force-glow {
-  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+  filter: drop-shadow(0 0 10px rgba(82, 180, 255, 0.6));
 }
 
 @keyframes pulseGlow {
