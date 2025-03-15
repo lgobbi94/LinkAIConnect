@@ -208,5 +208,21 @@
 }
 
 .space-rotation {
-  animation: rotate3D
+  animation: rotate3D 20s infinite ease-in-out;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateZ(0) translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateZ(50px) translateY(-15px) translateX(10px);
+  }
+  100% {
+    transform: translateZ(0) translateY(0) translateX(0);
+  }
+}
+
+.float-particle {
+  animation: floatParticle 8s infinite ease-in-out;
 }
