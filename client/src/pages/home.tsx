@@ -13,23 +13,38 @@ export default function Home() {
 
   // AI-related words for random generation
   const aiWords = [
-    "AI", "Machine Learning", "Neural Networks", "Deep Learning", 
-    "Algorithms", "Data Science", "Robotics", "Automation", 
-    "Natural Language", "Computer Vision", "Chatbots", "Innovation", 
-    "Technology", "Artificial", "Intelligence", "Future", 
-    "Cognition", "Learning", "Prediction", "Analytics"
+    "AI",
+    "Machine Learning",
+    "Neural Networks",
+    "Deep Learning",
+    "Algorithms",
+    "Data Science",
+    "Robotics",
+    "Automation",
+    "Natural Language",
+    "Computer Vision",
+    "Chatbots",
+    "Innovation",
+    "Technology",
+    "Artificial",
+    "Intelligence",
+    "Future",
+    "Cognition",
+    "Learning",
+    "Prediction",
+    "Analytics",
   ];
 
   // Random word generation state
   const [currentWord, setCurrentWord] = useState<string>(aiWords[0]);
-  
+
   // Effect for changing words every 0.5 seconds
   React.useEffect(() => {
     const interval = setInterval(() => {
       const randomIndex = Math.floor(Math.random() * aiWords.length);
       setCurrentWord(aiWords[randomIndex]);
-    }, 500);
-    
+    }, 4000);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -55,7 +70,7 @@ export default function Home() {
           className="flex justify-center items-center mb-12 bg-gradient-to-r from-purple-900/30 to-blue-900/30 py-8 rounded-xl backdrop-blur-sm"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
+          transition={{ duration: 3, ease: "easeInOut" }}
         >
           <div className="flex flex-col items-center justify-center">
             <p className="text-slate-400 mb-2 text-sm">AI CONCEPT GENERATOR</p>
@@ -64,7 +79,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 2, ease: "easeInOut" }}
               className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500"
             >
               {currentWord}
