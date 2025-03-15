@@ -67,25 +67,30 @@ export default function Home() {
 
         {/* Star Wars Style AI Animation Section */}
         <motion.div
-          className="flex justify-center items-center mb-12 bg-gradient-to-r from-purple-900/30 to-blue-900/30 py-12 rounded-xl backdrop-blur-sm perspective-500 overflow-hidden"
+          className="flex justify-center items-center mb-12 bg-gradient-to-r from-purple-900/30 to-blue-900/30 py-12 rounded-xl backdrop-blur-sm perspective-800 overflow-hidden"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 3, ease: "easeInOut" }}
         >
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center w-full">
             <p className="text-slate-400 mb-2 text-sm">AI CONCEPT GENERATOR</p>
-            <div className="h-32 w-full max-w-xs overflow-hidden">
+            <div className="h-40 w-full relative star-wars-scene max-w-md">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentWord}
-                  initial={{ y: 100, rotateX: 30, opacity: 0 }}
-                  animate={{ y: 0, rotateX: 30, opacity: 1 }}
-                  exit={{ y: -100, rotateX: 30, opacity: 0 }}
-                  transition={{ duration: 2, ease: "easeInOut" }}
-                  className="text-3xl font-bold font-space text-center text-yellow-400 transform-gpu"
+                  initial={{ z: -400, y: 100, scale: 0.5, opacity: 0 }}
+                  animate={{ z: 0, y: 0, scale: 1, opacity: 1 }}
+                  exit={{ z: 200, y: -100, scale: 0.5, opacity: 0 }}
+                  transition={{ 
+                    duration: 3.5, 
+                    ease: [0.1, 0.3, 0.5, 1],
+                    opacity: { duration: 2.5 }
+                  }}
+                  className="text-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold font-space text-center text-yellow-400 transform-3d"
                   style={{ 
                     transformStyle: "preserve-3d", 
-                    transform: "perspective(500px) rotateX(30deg)"
+                    textShadow: "0 0 5px rgba(255, 230, 0, 0.7)",
+                    willChange: "transform, opacity"
                   }}
                 >
                   {currentWord}

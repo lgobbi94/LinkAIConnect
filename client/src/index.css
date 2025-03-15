@@ -76,24 +76,42 @@
   perspective: 500px;
 }
 
+.perspective-800 {
+  perspective: 800px;
+}
+
 .transform-gpu {
   transform: translateZ(0);
   backface-visibility: hidden;
 }
 
+.transform-3d {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.star-wars-scene {
+  perspective: 800px;
+  perspective-origin: center;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  position: relative;
+}
+
 @keyframes starWarsFloat {
   0% {
-    transform: perspective(500px) rotateX(30deg) translateY(100px);
+    transform: perspective(800px) rotateX(30deg) translateZ(-300px) translateY(100px);
     opacity: 0;
   }
-  10% {
+  15% {
     opacity: 1;
   }
-  90% {
+  85% {
     opacity: 1;
   }
   100% {
-    transform: perspective(500px) rotateX(30deg) translateY(-100px);
+    transform: perspective(800px) rotateX(30deg) translateZ(200px) translateY(-100px);
     opacity: 0;
   }
 }
@@ -101,4 +119,20 @@
 .star-wars-text {
   animation: starWarsFloat 4s ease-out forwards;
   transform-style: preserve-3d;
+}
+
+@keyframes rotate3D {
+  0% {
+    transform: perspective(800px) rotateX(20deg) rotateY(-10deg) rotateZ(5deg) translateZ(-200px);
+  }
+  50% {
+    transform: perspective(800px) rotateX(25deg) rotateY(5deg) rotateZ(0deg) translateZ(0px);
+  }
+  100% {
+    transform: perspective(800px) rotateX(20deg) rotateY(-10deg) rotateZ(5deg) translateZ(-200px);
+  }
+}
+
+.space-rotation {
+  animation: rotate3D 20s infinite ease-in-out;
 }
