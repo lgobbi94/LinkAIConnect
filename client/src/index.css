@@ -112,28 +112,23 @@
 }
 
 .cosmic-text {
-  background: linear-gradient(to bottom, #64e5ff 0%, #5271ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: pulseGlow 3s infinite alternate ease-in-out;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  animation: minimalPulse 4s infinite alternate ease-in-out;
 }
 
 .force-glow {
-  filter: drop-shadow(0 0 10px rgba(82, 180, 255, 0.6));
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
 }
 
-@keyframes pulseGlow {
+@keyframes minimalPulse {
   0% {
-    text-shadow: 0 0 15px rgba(255, 230, 0, 0.8), 0 0 25px rgba(255, 200, 0, 0.4);
-    filter: drop-shadow(0 0 7px rgba(255, 215, 0, 0.6));
-  }
-  50% {
-    text-shadow: 0 0 20px rgba(255, 230, 0, 0.9), 0 0 30px rgba(255, 200, 0, 0.6), 0 0 40px rgba(255, 180, 0, 0.4);
-    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
+    opacity: 0.7;
   }
   100% {
-    text-shadow: 0 0 25px rgba(255, 230, 0, 1), 0 0 35px rgba(255, 200, 0, 0.7), 0 0 45px rgba(255, 180, 0, 0.5);
-    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.7));
+    opacity: 1;
   }
 }
 
