@@ -80,6 +80,10 @@
   perspective: 800px;
 }
 
+.perspective-1000 {
+  perspective: 1000px;
+}
+
 .transform-gpu {
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -91,48 +95,118 @@
   transform-style: preserve-3d;
 }
 
-.star-wars-scene {
-  perspective: 800px;
+.cosmic-background {
+  background: linear-gradient(125deg, rgba(16, 12, 40, 0.9) 0%, rgba(35, 15, 60, 0.9) 50%, rgba(20, 10, 50, 0.9) 100%);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(103, 76, 215, 0.3) inset;
+}
+
+.cosmic-scene {
+  perspective: 1000px;
   perspective-origin: center;
   transform-style: preserve-3d;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
 }
 
-@keyframes starWarsFloat {
+.cosmic-text {
+  animation: pulseGlow 3s infinite alternate ease-in-out;
+}
+
+@keyframes pulseGlow {
   0% {
-    transform: perspective(800px) rotateX(30deg) translateZ(-300px) translateY(100px);
-    opacity: 0;
-  }
-  15% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
+    text-shadow: 0 0 10px rgba(255, 230, 0, 0.7), 0 0 15px rgba(255, 200, 0, 0.3);
   }
   100% {
-    transform: perspective(800px) rotateX(30deg) translateZ(200px) translateY(-100px);
-    opacity: 0;
+    text-shadow: 0 0 15px rgba(255, 230, 0, 0.9), 0 0 25px rgba(255, 200, 0, 0.5), 0 0 35px rgba(255, 180, 0, 0.3);
   }
 }
 
-.star-wars-text {
-  animation: starWarsFloat 4s ease-out forwards;
-  transform-style: preserve-3d;
+.stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: twinkle 3s infinite alternate ease-in-out;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(0.7);
+  }
+}
+
+.nebula-1 {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(103, 58, 183, 0.3) 0%, rgba(103, 58, 183, 0.1) 60%, transparent 100%);
+  filter: blur(15px);
+  animation: nebulaPulse 8s infinite alternate ease-in-out;
+}
+
+.nebula-2 {
+  position: absolute;
+  bottom: 20%;
+  right: 15%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(75, 0, 130, 0.3) 0%, rgba(75, 0, 130, 0.1) 60%, transparent 100%);
+  filter: blur(15px);
+  animation: nebulaPulse 10s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes nebulaPulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.8) translateZ(-10px);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.2) translateZ(10px);
+  }
+}
+
+.glow-text {
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
+  letter-spacing: 3px;
+  font-weight: 500;
 }
 
 @keyframes rotate3D {
   0% {
-    transform: perspective(800px) rotateX(20deg) rotateY(-10deg) rotateZ(5deg) translateZ(-200px);
+    transform: perspective(1000px) rotateX(20deg) rotateY(-10deg) rotateZ(5deg) translateZ(-200px);
   }
   50% {
-    transform: perspective(800px) rotateX(25deg) rotateY(5deg) rotateZ(0deg) translateZ(0px);
+    transform: perspective(1000px) rotateX(25deg) rotateY(5deg) rotateZ(0deg) translateZ(0px);
   }
   100% {
-    transform: perspective(800px) rotateX(20deg) rotateY(-10deg) rotateZ(5deg) translateZ(-200px);
+    transform: perspective(1000px) rotateX(20deg) rotateY(-10deg) rotateZ(5deg) translateZ(-200px);
   }
 }
 
 .space-rotation {
-  animation: rotate3D 20s infinite ease-in-out;
+  animation: rotate3D
 }
