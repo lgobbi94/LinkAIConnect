@@ -100,42 +100,45 @@ export default function Home() {
               <div className="nebula-2"></div>
             </div>
             
-            <div className="h-60 w-full relative cosmic-scene max-w-md space-rotation">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentWord}
-                  initial={{ z: -600, y: 150, scale: 0.2, opacity: 0, rotateX: 35 }}
-                  animate={{ z: 0, y: 0, scale: 1, opacity: 1, rotateX: 15 }}
-                  exit={{ z: 300, y: -150, scale: 0.2, opacity: 0, rotateX: -15 }}
-                  transition={{ 
-                    duration: 4, 
-                    ease: [0.1, 0.3, 0.5, 1],
-                    opacity: { duration: 3 }
-                  }}
-                  className="text-4xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold font-space text-center text-yellow-400 transform-3d cosmic-text"
-                  style={{ 
-                    transformStyle: "preserve-3d", 
-                    willChange: "transform, opacity",
-                    letterSpacing: "3px"
-                  }}
-                >
-                  {currentWord}
-
-                  {/* Reflection effect */}
+            <div className="h-60 w-full relative cosmic-scene max-w-md">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <AnimatePresence mode="wait">
                   <motion.div
-                    className="absolute w-full text-center opacity-30 blur-[1px]"
+                    key={currentWord}
+                    initial={{ z: -600, y: 150, scale: 0.2, opacity: 0, rotateX: 35 }}
+                    animate={{ z: 0, y: 0, scale: 1, opacity: 1, rotateX: 15 }}
+                    exit={{ z: 300, y: -150, scale: 0.2, opacity: 0, rotateX: -15 }}
+                    transition={{ 
+                      duration: 4, 
+                      ease: [0.1, 0.3, 0.5, 1],
+                      opacity: { duration: 3 }
+                    }}
+                    className="text-5xl font-bold font-space text-center transform-3d cosmic-text force-glow"
                     style={{ 
-                      top: '1.5em',
-                      left: 0,
-                      transform: 'rotateX(180deg) scale(1, -0.5)',
-                      transformOrigin: 'top',
-                      maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%)'
+                      transformStyle: "preserve-3d", 
+                      willChange: "transform, opacity",
+                      letterSpacing: "4px",
+                      zIndex: 20
                     }}
                   >
                     {currentWord}
+
+                    {/* Enhanced reflection effect */}
+                    <motion.div
+                      className="absolute w-full text-center opacity-40 blur-[1px]"
+                      style={{ 
+                        top: '1.5em',
+                        left: 0,
+                        transform: 'rotateX(180deg) scale(1, -0.5)',
+                        transformOrigin: 'top',
+                        maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%)'
+                      }}
+                    >
+                      {currentWord}
+                    </motion.div>
                   </motion.div>
-                </motion.div>
-              </AnimatePresence>
+                </AnimatePresence>
+              </div>
 
               {/* Floating particles */}
               {[...Array(12)].map((_, i) => (
