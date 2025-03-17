@@ -1,442 +1,153 @@
 
 
-NOTETEMATICHE
-Note tematiche sull'Unione europea - 2025
-www.europarl.europa.eu/factsheets/it
-1
-LA PROPRIETÀ INTELLETTUALE,
-INDUSTRIALE E COMMERCIALE
-La  proprietà  intellettuale  designa  l'insieme  dei  diritti  esclusivi  riconosciuti  sulle
-creazioni intellettuali. Si articola, da un lato, nella proprietà industriale relativa a
-invenzioni (brevetti), marchi, disegni e modelli industriali e indicazioni geografiche
-e,  dall'altro,  nei  diritti  d'autore  a  copertura  delle  opere  letterarie  e  artistiche.
-Dall'entrata in vigore del trattato sul funzionamento dell'Unione europea (TFUE)
-nel 2009, l'UE ha competenza esplicita in materia di diritti di proprietà intellettuale
-(articolo 118).
-BASE GIURIDICA
-Articoli 114 e 118 TFUE.
-OBIETTIVI
-Sebbene  regolamentati  da  diverse  normative  nazionali  e  internazionali,  i  diritti  di
-proprietà  intellettuale  (DPI)  sono  anche  disciplinati  dalla  legislazione  dell'Unione
-europea.  L'articolo  118  TFUE  stabilisce  che,  nell'ambito  dell'instaurazione  o  del
-funzionamento del mercato unico, il Parlamento europeo e il Consiglio, deliberando
-secondo  la  procedura  legislativa  ordinaria,  stabiliscono  le  misure  per  la  creazione
-del diritto dell'Unione in materia di proprietà intellettuale, al fine di garantire una
-protezione uniforme dei DPI nell'Unione, e per l'istituzione di regimi di autorizzazione,
-di coordinamento e di controllo centralizzati a livello di Unione. L'attività legislativa
-dell'Unione  in  questo  settore  mira  principalmente  ad  armonizzare  taluni  aspetti
-specifici  dei  DPI  attraverso  la  creazione  di  un  sistema  proprio,  come  nel  caso
-del  marchio  e  dei  disegni  dell'UE,  e  come  avverrà  per  i  brevetti.  Molti  degli
-strumenti dell'Unione tengono conto degli obblighi internazionali degli Stati membri,
-stabiliti  nell'accordo  di  Berna  e  nella  convenzione  di  Roma,  nonché  nell'accordo
-dell'Organizzazione  mondiale  del  commercio  sugli  aspetti  dei  diritti  di  proprietà
-intellettuale attinenti al commercio (accordo TRIPS) e nei trattati internazionali del
-1996 dell'Organizzazione mondiale della proprietà intellettuale (OMPI).
-RISULTATI CONSEGUITI
-A.Armonizzazione legislativa
-1.Marchi, disegni e modelli
-Nell'UE, il quadro giuridico per i marchi si basa su un sistema a quattro livelli per la
-registrazione del marchio, che coesiste con i sistemi dei marchi nazionali armonizzati
-dalla direttiva sui marchi d'impresa (direttiva (UE) 2015/2436, del 16 dicembre 2015,
-sul ravvicinamento delle legislazioni degli Stati membri in materia di marchi d'impresa).
-Oltre alla strada nazionale, le possibili vie per la protezione dei marchi nell'UE sono
-la strada del Benelux, il marchio UE, introdotto nel 1994, e la rotta internazionale.
-Il regolamento (UE) 2017/1001, del 14 giugno 2017, sul marchio dell'Unione europea
+Curriculum Vitae 
+Lorenzo Gobbi       
+Nato a Roma il 27 dicembre 1994   
+Telefono: +39-3281532072 
+Email personale: lorenzo.gobbi94@gmail.com   
+ 
+Profilo Professionale       
+Professionista con oltre 4 anni di esperienza nel settore dell'informatica, consulenza 
+funzionale e sviluppo software, specializzato in architettura di soluzioni IT complesse, 
+integrazione di sistemi, intelligenza artificiale e sviluppo di applicazioni enterprise. Ho 
+ricoperto ruoli di Team Leader, Scrum Master, Project Manager e Software Architect, con 
+esperienza nella gestione di team e progetti tecnologici avanzati. Competenze trasversali in 
+vari linguaggi di programmazione, tecnologie cloud, AI e integrazione di servizi multilayer. 
+ 
+Esperienze Professionali     
+Data Engineer - Consultant       
+Crisma s.r.l. presso Movyon S.P.A, Roma - Firenze 
+09/2021 – Attualmente   
+- Software Architect per l'integrazione dei sistemi Milestone con software di sala radio: 
+progettazione e architettura del sistema di integrazione tra la piattaforma di videosorveglianza     
+Milestone e i software di gestione delle sale radio, garantendo un'interoperabilità fluida e la 
+gestione in tempo reale dei dati video per le attività operative. 
+- Project Manager per software di Intelligenza Artificiale: coordinamento del team e 
+supervisione dello sviluppo di un sistema AI per l'analisi predittiva, con particolare attenzione 
+all'ottimizzazione dei modelli e al rispetto dei tempi di rilascio. 
+- Sviluppo di un sistema VMS (Video Management System): gestione e supervisione del 
+progetto di realizzazione di un sistema VMS per la gestione di flussi video in tempo reale. 
+- Scrum Master - Progetto Cantieri di Bologna: guida del team per lo sviluppo di soluzioni 
+software per la gestione e monitoraggio dei cantieri infrastrutturali, garantendo l'adozione 
+delle metodologie Agile/Scrum e facilitando la comunicazione tra gli stakeholder. 
+- Team Leader del gruppo Datex: responsabile della gestione e implementazione del 
+protocollo Datex II per la gestione dei dati di viabilità autostradale. Supervisione dello 
+sviluppo, testing e deployment delle soluzioni. 
 
-NOTETEMATICHE
-Note tematiche sull'Unione europea - 2025
-www.europarl.europa.eu/factsheets/it
-2
-codifica e sostituisce tutti i precedenti regolamenti CE sui marchi dell'UE. La codifica
-è stata eseguita a fini di chiarezza, poiché il sistema dei marchi dell'Unione è già stato
-modificato diverse volte in modo sostanziale. Il marchio dell'Unione europea ha un
-carattere unitario e un effetto equivalente in tutta l'UE. L'Ufficio dell'Unione europea
-per  la  proprietà  intellettuale  (EUIPO)  è  responsabile  della  gestione  del  marchio  e
-dei disegni dell'UE. Il regolamento relativo al marchio dell'Unione europea stabilisce
-inoltre gli importi delle tasse dovute all'EUIPO, fissati a un livello tale da assicurare che
-le entrate così generate coprano le spese dell'EUIPO e integrino i sistemi dei marchi
-nazionali esistenti.
-La direttiva 98/71/CE, del 13 ottobre 1998, ha ravvicinato le disposizioni nazionali
-in  materia  di  protezione  giuridica  di  disegni  e  modelli.  Una  proposta  di  rifusione
-della  direttiva  è  stata  posta  in  votazione  al  Parlamento  europeo  il  14  marzo  2024
-con  l'obiettivo  di  garantire  che  il  sistema  di  protezione  dei  disegni  e  modelli  sia
-adattato all'era digitale (in particolare in seguito all'avvento delle stampanti 3D) e
-diventi significativamente più accessibile ed efficace per i progettisti indipendenti,
-le piccole e medie imprese e le industrie in cui disegni e modelli svolgono un ruolo
-importante,  riducendo  i  costi,  semplificando  le  procedure,  ovvero  rendendole  più
-rapide  e  prevedibili,  e  incrementando  la  certezza  del  diritto.  Il  regolamento  (CE)
-n. 6/2002 del Consiglio, del 12 dicembre 2001, quale modificato, ha istituito un sistema
-comunitario di protezione dei disegni e dei modelli. Il 14 marzo 2024 il Parlamento
-europeo ha approvato una risoluzione legislativa sulla proposta di regolamento che
-modifica il regolamento (CE) n. 6/2002 del Consiglio e abroga il regolamento (CE)
-n. 2246/2002 della Commissione, con lo stesso obiettivo: garantire che il sistema di
-protezione dei disegni e modelli sia adattato all'era digitale e migliorarne l'accessibilità
-(anche economica) e l'efficacia, semplificando le procedure e ottimizzando il livello
-e  la  struttura  delle  tasse  da  pagare.  La  decisione  2006/954/CE  del  Consiglio  e  il
-regolamento (CE) n. 1891/2006 del Consiglio, entrambi del 18 dicembre 2006, hanno
-collegato  il  sistema  di  registrazione  dei  disegni  e  modelli  dell'Unione  al  sistema
-internazionale di registrazione di disegni e modelli industriali dell'OMPI.
-2.Diritto d'autore e diritti connessi
-Il  diritto  d'autore  garantisce  che  gli  autori,  i  compositori,  i  registi  e  gli  altri  artisti
-ricevano  un  compenso  per  le  loro  opere  e  che  esse  siano  tutelate.  Le  tecnologie
-digitali hanno cambiato profondamente le modalità di produzione e distribuzione dei
-contenuti creativi come pure l'accesso agli stessi. La legislazione dell'UE in materia
-di diritti d'autore si compone di 13 direttive e due regolamenti che armonizzano i
-principali  diritti  di  autori,  artisti  interpreti  o  esecutori,  produttori  ed  emittenti.  La
-definizione di norme a livello dell'Unione consente di ridurre le disparità nazionali, di
-garantire il livello di protezione necessario per stimolare la creatività e gli investimenti
-nella creatività, di promuovere la diversità culturale, nonché di facilitare l'accesso ai
-contenuti e ai servizi digitali per i consumatori e le imprese di tutto il mercato unico.
-a.Diritti d'autore
-La direttiva 2001/29/CE, del 22 maggio 2001, sull'armonizzazione di taluni aspetti
-del diritto d'autore e dei diritti connessi nella società dell'informazione ha adeguato
-agli sviluppi tecnologici la normativa sul diritto d'autore e i diritti connessi, ma risulta
-ora superata a causa degli sviluppi straordinariamente rapidi che hanno interessato
+- Integrazione di sistemi complessi: gestione dell'intero ciclo di vita del progetto per 
+l'integrazione di soluzioni multilayer con utilizzo di tecnologie come Kafka e MQTT per la 
+gestione dei messaggi in tempo reale tra sistemi distribuiti. 
+- Pipeline ETL e gestione dati: sviluppo e manutenzione di pipeline ETL per la raccolta, 
+trasformazione e caricamento dati, con ottimizzazione delle performance per applicazioni su 
+larga scala. 
+ 
+Consulente IT - Oracle SOA Analyst       
+Settore Cliente: Finance, Monetica, Banking     
+Philmark Group presso Cabel Industry S.P.A., Roma - Empoli 
+01/2020 – 05/2020   
+- Sviluppo e integrazione: creazione di soluzioni enterprise su piattaforma Oracle SOA Suite 
+utilizzando Java, BPEL, BPM e XQuery, con particolare attenzione alla scalabilità e sicurezza. 
+- Amministrazione di Oracle WebLogic: configurazione e tuning del server WebLogic per 
+garantire l'alta disponibilità e l'ottimizzazione delle performance delle applicazioni SOA. 
+- FlexCube integration: sviluppo di soluzioni integrate con il sistema bancario Oracle 
+FlexCube, supportando processi finanziari e gestione dati tramite REST e SOAP. 
+ 
+Sales Marketing Executive e Team Leader       
+OM Group Spa - Roma 
+06/2016 – 12/2019   
+- Team Leader di un gruppo di Sales Account, con responsabilità nella gestione delle vendite, 
+CRM e sviluppo strategico delle attività commerciali. Coordinamento di campagne marketing 
+per il settore pay-per-view. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
-NOTETEMATICHE
-Note tematiche sull'Unione europea - 2025
-www.europarl.europa.eu/factsheets/it
-3
-il  mondo  digitale,  tra  cui  la  distribuzione  e  la  fruizione  di  programmi  televisivi  e
-radiofonici, con il 49 % degli internauti nell'UE che ha accesso a musica, contenuti
-audiovisivi  e  giochi  online  (stima  Eurostat).  È  pertanto  necessario  definire  una
-legislazione armonizzata a livello dell'UE in materia di diritti d'autore per i consumatori,
-i creatori e le imprese.
-La direttiva sul diritto d'autore (direttiva (UE) 2019/790) del 17 aprile 2019 prevede
-un diritto d'autore accessorio per gli editori e una remunerazione equa per i contenuti
-protetti  dal  diritto  d'autore.  Finora  le  piattaforme  online  non  hanno  avuto  alcuna
-responsabilità giuridica per quanto riguarda l'utilizzo e il caricamento sui loro siti di
-contenuti protetti da diritti d'autore. I nuovi requisiti non pregiudicano il caricamento,
-a fini non commerciali, di opere protette dal diritto d'autore su siti di enciclopedie
-online come Wikipedia. La direttiva (UE) 2019/789 (direttiva "CabSat"), adottata lo
-stesso  giorno,  mira  ad  aumentare  il  numero  di  programmi  televisivi  e  radiofonici
-disponibili online ai consumatori dell'UE. Gli organismi di radiodiffusione tendono a
-integrare le proprie trasmissioni tradizionali con un numero sempre maggiore di servizi
-online, poiché gli utenti desiderano avere accesso ai contenuti televisivi e radiofonici
-in qualsiasi luogo e momento. La direttiva ha introdotto il principio del paese d'origine
-per agevolare la concessione di licenze di diritti per determinati programmi offerti
-dalle  emittenti  sulle  loro  piattaforme  online  (come  i  servizi  di  simulcast  e  catch-
-up).  Le  emittenti  devono  ottenere  i  permessi  di  proprietà  intellettuale  nel  paese
-di stabilimento all'interno dell'UE (vale a dire il paese di origine) al fine di rendere
-disponibili online in tutti i paesi dell'Unione i programmi radiofonici, i notiziari televisivi
-e  i  programmi  di  attualità,  nonché  le  produzioni  interamente  finanziate  con  fondi
-propri.  Gli  Stati  membri  avevano  tempo  fino  al  7  giugno  2021  per  adottare  le
-disposizioni legislative del caso al fine di soddisfare i requisiti della direttiva.
-La direttiva (UE) 2017/1564, del 13 settembre 2017, relativa a taluni utilizzi consentiti di
-determinate opere e di altro materiale protetto da diritto d'autore e da diritti connessi
-a beneficio delle persone non vedenti, con disabilità visive o con altre difficoltà nella
-lettura dei testi a stampa agevola l'accesso ai libri e ad altro materiale stampato in
-formati adeguati, nonché la loro circolazione nel mercato interno.
-Il  regolamento  (UE)  2017/1128,  del  14  giugno  2017,  relativo  alla  portabilità
-transfrontaliera di servizi di contenuti online nel mercato interno mira a garantire che
-i consumatori che acquistano film, trasmissioni sportive, musica, e-book e giochi, o
-sottoscrivono un abbonamento ad essi, possano accedervi quando si recano in altri
-Stati membri dell'UE.
-b.Durata della protezione dei diritti d'autore e dei diritti connessi
-Tali diritti sono tutelati per la vita e per 70 anni dopo la morte dell'autore/creatore.
-La direttiva 2011/77/UE che modifica la direttiva 2006/116/CE concernente la durata
-di protezione del diritto d'autore e di alcuni diritti connessi ha esteso la durata della
-protezione dei diritti d'autore per gli esecutori di registrazioni sonore da 50 a 70 anni
-dopo la loro registrazione e per gli autori di musica, quali compositori e parolieri,
-a 70 anni dopo la morte dell'autore. Il termine di 70 anni è divenuto uno standard
-internazionale per la protezione delle registrazioni sonore. Attualmente 64 paesi in
-tutto il mondo proteggono le registrazioni sonore per 70 anni o più.
+Istruzione e Formazione     
+ 
+Laurea Triennale in Fisica (incompleta)       
+Università di Roma "La Sapienza"     
+2013 – 2017     
+Completati 16 esami su 22. 
+ 
+Esami come privatista 
+Università di Roma Tre - Facoltà di Economia     
+Completati 3 esami. 
+ 
+Diploma di Maturità Scientifica       
+Liceo Scientifico, Roma     
+2013 – Voto: 90/100 
+ 
+Certificazioni     
+ 
+- Milestone Certified Integration Technician (MCIT) - 2021   
+- Scrum Master Certification - 2020   
+- Certificazione Java Development - Porta Futuro Lazio, 2019   
+- Diploma di Inglese - ECM College, Dublino, 2014 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
-NOTETEMATICHE
-Note tematiche sull'Unione europea - 2025
-www.europarl.europa.eu/factsheets/it
-4
-c.Programmi informatici e banche dati
-La  direttiva  91/250/CEE  imponeva  agli  Stati  membri  di  tutelare  i  programmi
-informatici attraverso il diritto d'autore, nella misura in cui erano considerati opere
-letterarie  a  titolo  della  convenzione  di  Berna  sulla  tutela  delle  opere  letterarie  e
-artistiche.  Essa  è  stata  codificata  dalla  direttiva  2009/24/CE.  La  direttiva  96/9/
-CE (direttiva sulle banche dati) è intesa a fornire una tutela giuridica delle banche
-dati,  definite  come  "una  raccolta  di  opere,  dati  o  altri  elementi  indipendenti
-sistematicamente o metodicamente disposti e individualmente accessibili grazie a
-mezzi elettronici o in altro modo". La direttiva prevede di accordare una protezione alle
-banche dati mediante il diritto d'autore, per la creazione intellettuale, e una protezione
-sulla base di un diritto sui generis intesa a tutelare un investimento (finanziario, in
-risorse umane, sforzi ed energia) per il conseguimento, la verifica e la presentazione
-del contenuto. Il 23 febbraio 2022 la Commissione ha presentato una proposta di
-nuovo regolamento riguardante norme armonizzate sull'accesso equo ai dati e sul loro
-utilizzo (normativa sui dati), con l'intento di garantire un'equa ripartizione del valore
-dei dati tra gli operatori dell'economia dei dati e di promuovere l'accesso ai dati e il
-relativo utilizzo. In seguito a un'intensa attività legislativa, supportata da una ricerca
-accademica
-[1]
-, il 9 novembre 2023 la plenaria del Parlamento ha approvato in prima
-lettura la sua posizione in merito a tale proposta. Il 30 maggio 2022 il Parlamento e
-il Consiglio hanno adottato il regolamento sulla governance dei dati, che introduce
-meccanismi volti a facilitare il riutilizzo di determinate categorie di dati protetti del
-settore pubblico, a rafforzare la fiducia nei servizi di intermediazione dei dati e a
-promuovere l'altruismo dei dati in tutta l'UE.
-d.Società di gestione collettiva
-La diffusione di contenuti protetti dal diritto d'autore e diritti connessi è subordinata
-alla concessione di licenze da parte dei vari titolari dei diritti. I titolari affidano tali
-diritti  a  società  di  gestione  collettiva  che  li  gestiscono  a  loro  nome.  A  meno  che
-non  abbia  motivi  debitamente  giustificati  per  rifiutare  la  gestione,  l'organismo  di
-gestione  collettiva  è  obbligato  a  gestire  tali  diritti.  La  direttiva  2014/26/UE  sulla
-gestione  collettiva  dei  diritti  d'autore  e  dei  diritti  connessi  e  sulla  concessione  di
-licenze  multiterritoriali  per  i  diritti  su  opere  musicali  per  l'uso  online  nel  mercato
-interno stabilisce i requisiti applicabili agli organismi di gestione collettiva, al fine di
-assicurare norme rigorose in materia di governance, gestione finanziaria, trasparenza
-e comunicazione. Essa è intesa a garantire che i titolari dei diritti abbiano voce in
-capitolo nella gestione dei propri diritti e prevede un migliore funzionamento delle
-organizzazioni di gestione collettiva, mediante norme a livello dell'Unione europea.
-Gli Stati membri devono garantire che gli organismi di gestione collettiva agiscano
-nell'interesse dei titolari dei diritti di cui rappresentano i diritti.
-3.Brevetti
-Un  brevetto  è  un  titolo  giuridico  che  può  essere  concesso  per  ogni  invenzione
-di  carattere  tecnico  purché  sia  nuova,  comporti  un'attività  inventiva  e  sia  atta  a
-un'applicazione  industriale.  Un  brevetto  conferisce  al  titolare  il  diritto  di  impedire
-[1]Leistner M. e Antoine L., IPR and the use of open data and data sharing initiative by public and private actors (I diritti di
-proprietà intellettuale e l'uso di iniziative di apertura e condivisione dei dati da parte di attori pubblici e privati), dipartimento
-tematico Diritti dei cittadini e affari costituzionali, Parlamento europeo, maggio 2022.
+Competenze Tecniche     
+ 
+Linguaggi di Programmazione:       
+- Java, Python, C, C# , JavaScript, TypeScript, HTML/CSS, R, SQL, PLSQL, BPEL, BPM, XQuery 
+ 
+Framework e Librerie:       
+- Spring (v4+), Hibernate, JSF, Node.JS, React.JS, Angular (v8+), Bootstrap, Apache Struts,     
+TensorFlow, Keras, PyTorch     
+ 
+Database:       
+- RDBMS: Oracle, MySQL, MariaDB, PostgreSQL, Microsoft SQL Server   
+- NoSQL: MongoDB  
+- Vectorial DB: Weaviate 
+ 
+Intelligenza Artificiale e Machine Learning:       
+- Librerie AI/ML: TensorFlow, Keras, PyTorch   
+- Piattaforme cloud per AI: AWS SageMaker, Google AI Platform   
+- Data preprocessing: data augmentation, data cleaning, feature scaling e selezione di feature 
+per modelli AI 
+ 
+Messaggistica e Sistemi Distribuiti:       
+- Kafka: gestione di sistemi distribuiti per la raccolta e analisi di grandi volumi di dati in tempo 
+reale.   
+- MQTT: implementazione di soluzioni di messaggistica leggera per l'internet delle cose (IoT) e 
+sistemi distribuiti. 
+ 
+DevOps e Cloud:       
+- Docker, Kubernetes, Jenkins, GitLab   
+- AWS, Azure   
+ 
 
-NOTETEMATICHE
-Note tematiche sull'Unione europea - 2025
-www.europarl.europa.eu/factsheets/it
-5
-ad  altri  di  produrre,  utilizzare  o  vendere  l'invenzione  senza  autorizzazione.  I
-brevetti incoraggiano le imprese a provvedere ai necessari investimenti nel campo
-dell'innovazione e incentivano i singoli soggetti e le imprese a destinare risorse alla
-ricerca e allo sviluppo. In Europa le invenzioni tecniche possono essere protette da
-brevetti nazionali rilasciati dalle autorità nazionali competenti o da brevetti europei
-rilasciati  a  livello  centrale  dall'Ufficio  europeo  dei  brevetti.  Quest'ultimo  è  il  ramo
-esecutivo dell'Organizzazione europea dei brevetti, che conta attualmente 39 Stati
-contraenti. L'UE in sé non è membro di detta organizzazione.
-Dopo anni di dibattiti tra gli Stati membri, nel 2012 il Parlamento e il Consiglio hanno
-approvato la base giuridica per un brevetto europeo con effetto unitario (brevetto
-unitario) Un accordo internazionale tra gli Stati membri dell'UE istituisce dunque un
-organo giurisdizionale unico specializzato in materia brevettuale.
-La  conferma  da  parte  della  Corte  di  giustizia  dell'Unione  europea  (CGUE)  del
-pacchetto  brevetti  nella  sua  sentenza  del  5  maggio  2015  nelle  cause  C-146/13  e
-C-147/13  ha  spianato  la  strada  a  un  vero  e  proprio  brevetto  europeo.  Il  sistema
-precedente coesiste con il nuovo grazie a misure transitorie.
-Dalla  sua  entrata  in  vigore,  il  1º  giugno  2023,  il  brevetto  unitario  UE,  concesso
-dall'Ufficio  europeo  dei  brevetti,  ha  fornito  una  protezione  unitaria  con  effetto
-equivalente in tutti i paesi partecipanti. Le aziende hanno la possibilità di proteggere
-le proprie invenzioni in tutti gli Stati membri dell'UE con un vero e proprio brevetto
-europeo e possono inoltre impugnare o difendere i brevetti unitari in un'unica azione
-giudiziaria grazie al tribunale unificato dei brevetti di nuova istituzione. In tal modo
-sarà possibile ottimizzare il sistema e ridurre i costi di traduzione. L'accordo relativo al
-tribunale unificato dei brevetti stabilisce che il primato del diritto dell'UE deve essere
-rispettato (articolo 20) e che le decisioni della CGUE sono vincolanti per il tribunale
-unificato dei brevetti. Quest'ultimo è comune a 17 Stati membri dell'UE e si compone
-di un tribunale di primo grado, di una corte d'appello e di una cancelleria. Il tribunale di
-primo grado presenta una struttura decentrata, con una divisione centrale a Parigi, una
-sezione a Monaco di Baviera e una serie di divisioni regionali e locali in tutta Europa. La
-corte d'appello ha sede in Lussemburgo e si pronuncia sui ricorsi contro le sentenze
-del tribunale di primo grado e sulle richieste di rinvio delle decisioni definitive del
-tribunale.
-4.Segreti commerciali
-Il trattamento confidenziale delle informazioni commerciali ("know-how") è una pratica
-consolidata nei secoli. In molti paesi esistono strumenti giuridici per tutelare i segreti
-commerciali, indipendentemente dalla loro definizione come parte dei DPI. Il livello
-di protezione assegnato alle informazioni confidenziali non può essere paragonato
-ad  altri  ambiti  del  diritto  in  materia  di  proprietà  intellettuale,  come  i  brevetti,  i
-diritti  d'autore  e  i  marchi,  ma  in  linea  di  principio  può  essere  applicato  a  tempo
-indeterminato, e non solo per un periodo limitato. La tutela dei segreti commerciali
-varia notevolmente da paese a paese, più di quanto accada per altri ambiti del diritto
-in materia di proprietà intellettuale, e può risultare anche più vantaggiosa e meno
-onerosa rispetto a una tutela formale del brevetto. Dal 2016 è in vigore un quadro
-giuridico dell'UE, vale a dire la direttiva (UE) 2016/943 sulla protezione del know-
-
-NOTETEMATICHE
-Note tematiche sull'Unione europea - 2025
-www.europarl.europa.eu/factsheets/it
-6
-how riservato e delle informazioni commerciali riservate (segreti commerciali) contro
-l'acquisizione, l'utilizzo e la divulgazione illeciti.
-5.Diritti di proprietà intellettuale delle varietà vegetali
-La protezione delle varietà vegetali, anche nota come "privativa per ritrovati vegetali",
-è una forma di diritto di proprietà intellettuale concessa al costitutore di una nuova
-varietà vegetale. Il sistema di protezione dei ritrovati vegetali dell'Unione europea,
-basato  sui  principi  in  forza  dell'Atto  del  1991  della  Convenzione  internazionale
-per la protezione dei ritrovati vegetali, contribuisce allo sviluppo dell'agricoltura e
-dell'orticoltura. La legislazione dell'UE ha istituito un sistema in materia di tutela dei
-diritti relativi alle varietà vegetali. Tale sistema permette di accordare i DPI alle varietà
-vegetali. Tale regime viene attuato e applicato dall'Ufficio comunitario delle varietà
-vegetali.
-6.Indicazioni geografiche (IG)
-Nel quadro del sistema dei DPI dell'Unione in ambito agricolo, le denominazioni dei
-prodotti registrati come aventi un'indicazione geografica godono di una protezione
-giuridica contro le imitazioni e gli abusi all'interno dell'UE e nei paesi terzi con cui è
-stato firmato uno speciale accordo di protezione. È possibile concedere un'indicazione
-geografica  alle  denominazioni  dei  prodotti  se  esiste  un  legame  specifico  tra  la
-denominazione e il luogo di produzione di questi ultimi. Tale riconoscimento permette
-ai  consumatori  di  riconoscere  e  fidarsi  della  qualità  di  tali  prodotti,  aiutando
-nel  contempo  i  produttori  a  migliorare  la  commercializzazione  dei  loro  prodotti.
-Riconosciute in quanto proprietà intellettuale, le indicazioni geografiche svolgono un
-ruolo di sempre maggiore importanza nel quadro dei negoziati commerciali tra l'UE e
-altri paesi. Il regolamento (UE) n. 2024/1143 del Parlamento europeo e del Consiglio,
-dell'11 aprile 2024, relativo alle indicazioni geografiche dei vini, delle bevande spiritose
-e dei prodotti agricoli, nonché alle specialità tradizionali garantite e alle indicazioni
-facoltative di qualità per i prodotti agricoli, identifica i prodotti che hanno qualità,
-caratteristiche o una reputazione dovute a fattori naturali e umani legati al loro luogo di
-origine. I prodotti che hanno ottenuto il riconoscimento di un'indicazione geografica,
-o che sono sotto esame, sono elencati nei registri delle IG. Il 12 settembre 2023 il
-Parlamento ha approvato la sua posizione su un atto simile, ovvero il regolamento
-del  Parlamento  europeo  e  del  Consiglio  relativo  alla  protezione  delle  indicazioni
-geografiche per i prodotti artigianali e industriali, che modifica i regolamenti (UE)
-2017/1001 e (UE) 2019/1753. Il regolamento (UE) 2023/2411, del 18 ottobre 2023,
-è volto a concedere alle indicazioni geografiche per i prodotti industriali collegabili
-all'area geografica di produzione (quali la coltelleria di Albacete, il cristallo di Boemia
-e la porcellana di Limoges) una protezione analoga a quella concessa ad alimenti e
-bevande prodotti a livello regionale.
-A livello internazionale, la decisione (UE) 2019/1754 del Consiglio, del 7 ottobre 2019,
-relativa all'adesione dell'Unione europea all'atto di Ginevra dell'accordo di Lisbona
-sulle  denominazioni  di  origine  e  le  indicazioni  geografiche  designa  l'EUIPO  quale
-amministrazione competente in materia di indicazioni geografiche.
-7.Lotta alla contraffazione
-Secondo  le  stime,  le  importazioni  di  merci  contraffatte  e  usurpative  nell'UE
-ammontano a circa 85 miliardi di EUR (fino al 5 % delle importazioni totali). A livello
-
-NOTETEMATICHE
-Note tematiche sull'Unione europea - 2025
-www.europarl.europa.eu/factsheets/it
-7
-mondiale, il commercio di merci usurpative rappresenta il 2,5 % del commercio e
-raggiunge un valore di 338 miliardi di EUR; ne conseguono danni significativi per i
-titolari dei diritti, i governi e le economie.
-Alla  luce  delle  disparità  esistenti  nei  rispettivi  regimi  sanzionatori  degli  Stati
-membri,  che  rendono  difficile  la  lotta  efficace  contro  la  contraffazione  e  la
-pirateria, il Parlamento europeo e il Consiglio hanno adottato, come primo passo, la
-direttiva 2004/48/CE sul rispetto dei diritti di proprietà intellettuale. Tale direttiva
-mira a intensificare la lotta contro la pirateria e la contraffazione ravvicinando i sistemi
-legislativi nazionali, al fine di garantire un livello di tutela della proprietà intellettuale
-elevato, equivalente e omogeneo nel mercato interno, e prevede misure, procedure e
-rimedi di natura civile e amministrativa. Il regolamento (UE) n. 608/2013 relativo alla
-tutela dei diritti di proprietà intellettuale da parte delle autorità doganali stabilisce
-norme  procedurali  affinché  le  autorità  doganali  garantiscano  il  rispetto  dei  DPI  in
-relazione alle merci soggette a vigilanza o controllo doganale.
-B.Concetto dell'"esaurimento" dei diritti
-1.Definizione
-In base a tale concetto o dottrina giuridica che trova applicazione in tutti gli ambiti della
-proprietà industriale, un diritto di proprietà intellettuale si definisce esaurito quando
-un prodotto coperto da tale diritto (ad esempio un brevetto) è venduto dal titolare del
-diritto in questione o da altre persone con il consenso del titolare. Nell'Unione europea,
-la Corte di giustizia ha sempre interpretato i trattati dell'UE nel senso che, all'interno
-del mercato unico, i diritti conferiti dai DPI si considerano esauriti con l'immissione sul
-mercato (da parte del titolare del diritto o con il suo consenso) dei beni in questione. Il
-titolare di un diritto di proprietà intellettuale, industriale o commerciale protetto dalla
-legislazione di uno Stato membro non può far valere tali norme al fine di impedire
-l'importazione di prodotti che sono stati messi in circolazione in un altro Stato membro.
-2.Limiti
-L'"esaurimento" dei diritti dell'UE non si applica nel caso della commercializzazione di
-un prodotto contraffatto né in quello di prodotti immessi in libera pratica all'esterno
-dello Spazio economico europeo (articolo 6 dell'accordo TRIPS). Nel 1999 la Corte di
-giustizia dell'Unione europea, nella sentenza Sebago Inc. e Ancienne Maison Dubois
-& Fils SA/G-B Unic SA (causa C-173/98), ha statuito che gli Stati membri non hanno
-la possibilità di stabilire nel loro diritto nazionale l'esaurimento dei diritti conferiti dal
-marchio per prodotti posti in commercio in paesi terzi.
-3.Atti giuridici nell'ambito in esame
-La normativa dell'UE in materia di esaurimento dei diritti deriva in gran parte dalla
-giurisprudenza della Corte di giustizia relativa all'interpretazione dell'articolo 34 TFUE
-sulle misure di effetto equivalente alle restrizioni quantitative tra Stati membri
-[2]
-. Tale
-giurisprudenza è ripresa in ciascuno degli atti giuridici pertinenti dell'Unione in materia
-di DPI.
-[2]Cfr. Centrafarm BV ed Adriaan de Peijper/Sterling Drug Inc. (causa C-15/74) e Merck & Co. Inc./Stephar BV e Petrus
-Stephanus Exler (causa C-187/80).
-
-NOTETEMATICHE
-Note tematiche sull'Unione europea - 2025
-www.europarl.europa.eu/factsheets/it
-8
-C.Recente giurisprudenza della Corte di giustizia dell'Unione europea
-Nel  2012  la  CGUE  ha  confermato  nella  causa  SAS  (C-406/10)  che,  a  norma  della
-direttiva 91/250/CEE, solo l'espressione di un programma per elaboratore è tutelata
-dal diritto d'autore; le idee e i principi che sono alla base della logica, degli algoritmi e
-dei linguaggi di programmazione non sono tutelati a norma della direttiva in questione
-(punto 32 della sentenza). La Corte ha sottolineato che non costituiscono una forma
-di espressione di un programma per elaboratore, ai sensi dell'articolo 1, paragrafo 2,
-della direttiva 91/250/CEE, né la funzionalità di tale programma né il linguaggio di
-programmazione né il formato dei file di dati utilizzati nell'ambito di un programma per
-elaboratore per sfruttare talune delle sue funzioni (punto 39).
-Nella sentenza nella causa C-160/15 (GS Media BV/Sanoma Media Netherlands BV), la
-Corte ha dichiarato che la messa a disposizione, su un sito Internet, di un collegamento
-ipertestuale che rimanda a opere protette dal diritto d'autore, pubblicate senza il
-consenso  dell'autore  su  un  altro  sito  web,  non  costituisce  una  "comunicazione  al
-pubblico" quando la persona che invia il link non persegue fini di lucro e agisce senza
-sapere che quelle opere sono state pubblicate illegalmente.
-Nella sentenza nella causa C-484/14, del 15 settembre 2016, la Corte ha stabilito
-che  mettere  una  rete  di  comunicazione  senza  fili  a  disposizione  del  pubblico
-gratuitamente, al fine di richiamare l'attenzione dei potenziali clienti sui beni e i servizi
-di un negozio, costituisce un "servizio della società dell'informazione", ai sensi della
-direttiva 2000/31/CE, e ha confermato che, a determinate condizioni, non sorge la
-responsabilità di un prestatore che fornisce l'accesso a una rete di comunicazione.
-Pertanto, è escluso che il titolare di un diritto d'autore possa chiedere a tale prestatore
-di servizi un risarcimento per il motivo che la connessione a tale rete sia stata utilizzata
-da  terzi  allo  scopo  di  violare  i  suoi  diritti.  Proteggere  la  connessione  a  Internet
-mediante password garantisce un equilibrio fra i DPI dei titolari dei diritti stessi, da
-un lato, e la libertà d'impresa dei fornitori di accesso e la libertà di informazione degli
-utenti della rete, dall'altro.
-RUOLO DEL PARLAMENTO EUROPEO
-La  proprietà  intellettuale  crea  valore  aggiunto  per  le  imprese  e  le  economie
-dell'Unione.  Una  protezione  e  un'applicazione  uniformi  dei  DPI  contribuiscono  a
-promuovere l'innovazione e la crescita economica. Il Parlamento europeo si adopera
-quindi per armonizzare i DPI attraverso la creazione di un sistema unico dell'Unione,
-parallelamente ai sistemi nazionali, come nel caso del marchio e dei disegni dell'UE e
-del brevetto unitario europeo.
-Il Parlamento ha difeso l'armonizzazione progressiva dei DPI in varie risoluzioni sulla
-proprietà intellettuale, in particolare relative alla tutela giuridica delle basi di dati, delle
-invenzioni biotecnologiche e dei diritti d'autore. Si è altresì opposto alla brevettazione
-di  elementi  del  corpo  umano.  Il  27  febbraio  2014  il  Parlamento  ha  approvato  una
-relazione d'iniziativa sui prelievi per copie private (il diritto di realizzare copie per uso
-privato dei contenuti acquistati legalmente), poiché, grazie al progresso tecnologico,
-la  copia  digitale  per  uso  privato  ha  assunto  una  grande  importanza  economica.
-Il  Parlamento  è  inoltre  fortemente  impegnato  nel  progetto  di  trattato  dell'OMPI
-
-NOTETEMATICHE
-Note tematiche sull'Unione europea - 2025
-www.europarl.europa.eu/factsheets/it
-9
-sulle eccezioni al diritto d'autore per le persone con disabilità visive (il "trattato di
-Marrakech").
-Nel settembre 2018 il Parlamento ha approvato, nel quadro dei lavori preparatori per la
-revisione della normativa dell'UE in materia di diritto d'autore (cfr. A.2.a), una relazione
-contenente una serie di raccomandazioni importanti su tutte le questioni in gioco.
-Nel corso dell'iter legislativo si è aperto un acceso dibattito pubblico incentrato sugli
-articoli 11 e 13 del progetto di direttiva sul diritto d'autore nel mercato unico digitale.
-Il dibattito è culminato nel voto al Parlamento a sostegno degli sforzi intesi a creare
-un nuovo diritto per gli editori di media di monetizzare i contenuti su alcune grandi
-piattaforme  d'informazione,  nonché  un  nuovo  diritto  che  permetta  di  monitorare
-più agevolmente le violazioni del diritto d'autore su Internet. L'industria creativa ha
-accolto  con  favore  tali  proposte,  che  sono  state  invece  aspramente  criticate  dai
-rappresentanti  delle  aziende  tecnologiche.  Pertanto,  ancora  una  volta,  il  voto  del
-Parlamento europeo ha preparato il terreno per l'adozione della direttiva.
-Uno studio preparato per la commissione giuridica del Parlamento e commissionato
-dal suo dipartimento tematico Diritti dei cittadini e affari costituzionali evidenzia come
-l'intelligenza artificiale (IA) stia creando nuove frontiere in materia di protezione del
-diritto d'autore, in particolare per quanto riguarda l'addestramento nascosto dell'IA
-su materiali protetti dal diritto d'autore o dati protetti e la successiva generazione di
-contenuti da parte di tale IA
-[3]
-. Inoltre, diversi accordi contrattuali facilitano il riscatto
-dei diritti di proprietà intellettuale dai dati o consentono di rilevare i diritti di proprietà
-intellettuale degli interessati, sulla base del fatto che la pubblicazione è avvenuta su
-una particolare piattaforma o che la creazione/invenzione è avvenuta nel quadro di un
-contratto di servizi. Tali disposizioni riguardano:
-—dispositivi giuridici che privano i creatori dei diritti di proprietà intellettuale o
-li costringono a cedere licenze non remunerate per quanto riguarda i contenuti
-collocati sui servizi e sui server delle piattaforme digitali, e/o che trasferiscono
-tali diritti alle piattaforme;
-—contratti  di  buy-out  mediante  i  quali  le  piattaforme  acquisiscono  i  diritti  di
-proprietà intellettuale dei creatori;
-—dispositivi giuridici che privano i dipendenti, gli inventori o i creatori dei diritti di
-proprietà intellettuale relativi ai contenuti creati nell'ambito del loro impiego o
-del loro servizio, e/o che trasferiscono tali diritti al datore di lavoro ("lavoro su
-commissione")
-[4]
-.
-Alexandru-George Moș / Mariusz Maciejewski / Udo Bux
-05/2024
-[3]Maciejewski, M., Metaverse, dipartimento tematico Diritti dei cittadini e affari costituzionali, Parlamento europeo, giugno
-2023, pag. 57.
-[4]Macrez, F. et al., Buyout contracts imposed by platforms in the cultural and creative sector (I contratti di buy-out imposti
-dalle piattaforme nel settore culturale e creativo), dipartimento tematico Diritti dei cittadini e affari costituzionali, Parlamento
-europeo, ottobre 2023; Maciejewski, M., Metaverse, dipartimento tematico Diritti dei cittadini e affari costituzionali, Parlamento
-europeo, giugno 2023, pag. 57.
+Sistemistica e Server:       
+- Amministrazione di Sistemi Linux: gestione e configurazione di macchine Linux (Ubuntu, 
+CentOS, Red Hat) 
+- Server JBoss e Wildfly (v10+): amministrazione di applicazioni su server JBoss e Wildfly, con 
+focus su performance e gestione della sicurezza.   
+- Gestione di ambienti server: amministrazione e ottimizzazione di ambienti server enterprise, 
+monitoraggio log e gestione risorse. 
+ 
+Altre Tecnologie:       
+- Milestone, Oracle JDeveloper, Oracle FlexCube 
+ 
+Competenze Trasversali e di Leadership     
+ 
+- Esperienza come Team Leader: gestione di team tecnici e multidisciplinari in progetti 
+complessi, con focus sull'ottimizzazione delle risorse e la consegna nei tempi previsti.   
+- Leadership in contesti tecnici: guida di team con metodologie     Agile    , assicurando il 
+miglioramento continuo delle performance e l'efficacia delle comunicazioni tra team tecnici e 
+stakeholder.   
+ 
+Lingue       
+- Italiano: Madrelingua   
+- Inglese: Ottimo (Certificazione ECM College, Dublino)   
+ 
+ 
