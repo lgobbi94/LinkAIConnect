@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import LinkButton from "@/components/linktree/LinkButton";
 import type { Link, ChatConfig } from "@shared/schema";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/api";
+import { apiRequest } from "@/lib/queryClient";
 import { ProfilePicture } from "@/components/ProfilePicture";
 
 export default function Home() {
