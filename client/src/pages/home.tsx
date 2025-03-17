@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import React, { useState, useRef, useEffect, ChangeEvent, KeyboardEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import LinkButton from "@/components/linktree/LinkButton";
+import LinkButton from "@/components/linktree/LinkButton";
 import type { Link, ChatConfig } from "@shared/schema";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
@@ -258,7 +259,7 @@ export default function Home() {
                     transition={{ delay: 0.1 * (links.indexOf(link) + 1) }}
                     key={link.url}
                   >
-                    <LinkTree link={link} />
+                    <LinkButton link={link} />
                   </motion.div>
                 ))}
             </div>
