@@ -1,9 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import LinkButton from "@/components/linktree/LinkButton";
-import ChatButton from "@/components/chat/ChatButton";
-import type { Link } from "@shared/schema";
+import type { Link, ChatConfig } from "@shared/schema";
+import { useToast } from "@/components/ui/use-toast";
+import { apiRequest } from "@/lib/api";
 import { ProfilePicture } from "@/components/ProfilePicture";
 
 export default function Home() {
@@ -100,44 +101,44 @@ export default function Home() {
               <div className="nebula-2"></div>
             </div>
             
-            <div className="h-60 w-full relative cosmic-scene max-w-md">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={currentWord}
-                    initial={{ z: -600, y: 150, scale: 0.2, opacity: 0, rotateX: 35 }}
-                    animate={{ z: 0, y: 0, scale: 1, opacity: 1, rotateX: 15 }}
-                    exit={{ z: 300, y: -150, scale: 0.2, opacity: 0, rotateX: -15 }}
-                    transition={{ 
-                      duration: 4, 
-                      ease: [0.1, 0.3, 0.5, 1],
-                      opacity: { duration: 3 }
-                    }}
-                    className="text-5xl font-bold font-space text-center transform-3d cosmic-text force-glow"
-                    style={{ 
-                      transformStyle: "preserve-3d", 
-                      willChange: "transform, opacity",
-                      letterSpacing: "4px",
-                      zIndex: 20
-                    }}
-                  >
-                    {currentWord}
-
-                    {/* Enhanced reflection effect */}
-                    <motion.div
-                      className="absolute w-full text-center opacity-40 blur-[1px]"
-                      style={{ 
-                        top: '1.5em',
-                        left: 0,
-                        transform: 'rotateX(180deg) scale(1, -0.5)',
-                        transformOrigin: 'top',
-                        maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%)'
-                      }}
+            <div className="h-96 w-full relative cosmic-scene max-w-md">
+              <div className="absolute inset-0 flex flex-col items-center justify-start p-4">
+                <div className="w-full h-[300px] bg-slate-900/50 backdrop-blur-sm rounded-lg p-4 overflow-y-auto mb-4">
+                  {messages.map((message, i) => (
+                    <div
+                      key={i}
+                      className={`flex ${message.role === "assistant" ? "justify-start" : "justify-end"} mb-2`}
                     >
-                      {currentWord}
-                    </motion.div>
-                  </motion.div>
-                </AnimatePresence>
+                      <div
+                        className={`max-w-[80%] p-3 rounded-xl ${
+                          message.role === "assistant" 
+                            ? "bg-slate-800/80 text-violet-300" 
+                            : "bg-violet-600/80 text-white"
+                        }`}
+                      >
+                        {message.content}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="w-full flex gap-2">
+                  <input
+                    type="text"
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    onKeyPress={(e) => e.key === "Enter" && handleSend()}
+                    placeholder="Ask me anything..."
+                    className="flex-1 bg-slate-800/80 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-violet-500"
+                  />
+                  <button
+                    onClick={handleSend}
+                    disabled={isLoading}
+                    className="bg-violet-600 hover:bg-violet-700 text-white px-4 py-2 rounded-lg transition-colors"
+                  >
+                    Send
+                  </button>
+                </div>
               </div>
 
               {/* Floating particles */}
@@ -182,8 +183,54 @@ export default function Home() {
             : links?.map((link) => <LinkButton key={link.id} link={link} />)}
         </div>
       </div>
-
-      <ChatButton />
     </div>
   );
+
+  // Chat functionality
+  const [messages, setMessages] = useState<Array<{ role: "user" | "assistant"; content: string }>>([]);
+  const [input, setInput] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
+
+  // API config query
+  const { data: config } = useQuery<ChatConfig>({
+    queryKey: ["/api/chat/config"],
+  });
+
+  async function handleSend() {
+    if (!input.trim() || isLoading) return;
+
+    const userMessage = { role: "user" as const, content: input };
+    setMessages((prev) => [...prev, userMessage]);
+    setInput("");
+    setIsLoading(true);
+
+    try {
+      const res = await apiRequest("POST", "/api/chat/message", {
+        message: input,
+      });
+      const data = await res.json();
+
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: data.message },
+      ]);
+    } catch (err) {
+      let errorMessage = "Failed to send message. Please try again.";
+      if (err instanceof Error) {
+        if (err.message.includes("503")) {
+          errorMessage =
+            "AI chat is currently unavailable. Please check the API configuration.";
+        }
+      }
+      toast({
+        title: "Error",
+        description: errorMessage,
+        variant: "destructive",
+      });
+      setMessages((prev) => prev.slice(0, -1));
+    } finally {
+      setIsLoading(false);
+    }
+  }
 }
