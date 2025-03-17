@@ -138,16 +138,16 @@ export default function Home() {
                     type="text"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
-                    onKeyPress={(e) => e.key === "Enter" && handleSend()}
+                    onKeyDown={(e) => e.key === "Enter" && handleSend()}
                     placeholder="Ask me anything..."
                     className="flex-1 bg-slate-800/80 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-violet-500"
                   />
                   <button
-                    onClick={handleSend}
-                    disabled={isLoading}
-                    className="bg-violet-600 hover:bg-violet-700 text-white px-4 py-2 rounded-lg transition-colors"
+                    onClick={() => handleSend()}
+                    disabled={chatLoading}
+                    className="bg-violet-600 hover:bg-violet-700 text-white px-4 py-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send
+                    {chatLoading ? "Sending..." : "Send"}
                   </button>
                 </div>
               </div>
