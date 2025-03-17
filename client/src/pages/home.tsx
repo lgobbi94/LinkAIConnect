@@ -62,7 +62,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen overflow-auto">
-      <div className="max-w-lg mx-auto pt-20 px-4">
+      <div className="md:max-w-6xl mx-auto pt-20 px-4 md:flex md:flex-row md:gap-8">
+        <div className="md:w-1/3">
         <ProfilePicture />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -188,15 +189,18 @@ export default function Home() {
           </div>
         </motion.div>
 
-        <div className="space-y-4">
-          {isLoading
-            ? Array.from({ length: 5 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="h-14 bg-white/50 backdrop-blur-sm animate-pulse rounded-2xl"
-                />
-              ))
-            : links?.map((link) => <LinkButton key={link.id} link={link} />)}
+        </div>
+        <div className="md:w-2/3 md:mt-0 mt-8">
+          <div className="space-y-4">
+            {isLoading
+              ? Array.from({ length: 5 }).map((_, i) => (
+                  <div
+                    key={i}
+                    className="h-14 bg-white/50 backdrop-blur-sm animate-pulse rounded-2xl"
+                  />
+                ))
+              : links?.map((link) => <LinkButton key={link.id} link={link} />)}
+          </div>
         </div>
       </div>
     </div>
