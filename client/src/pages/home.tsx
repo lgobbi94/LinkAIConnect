@@ -189,7 +189,7 @@ export default function Home() {
   // Chat functionality
   const [messages, setMessages] = useState<Array<{ role: "user" | "assistant"; content: string }>>([]);
   const [input, setInput] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const [chatLoading, setChatLoading] = useState(false);
   const { toast } = useToast();
 
   // API config query
@@ -198,12 +198,12 @@ export default function Home() {
   });
 
   async function handleSend() {
-    if (!input.trim() || isLoading) return;
+    if (!input.trim() || chatLoading) return;
 
     const userMessage = { role: "user" as const, content: input };
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
-    setIsLoading(true);
+    setChatLoading(true);
 
     try {
       const res = await apiRequest("POST", "/api/chat/message", {
@@ -230,7 +230,7 @@ export default function Home() {
       });
       setMessages((prev) => prev.slice(0, -1));
     } finally {
-      setIsLoading(false);
+      setChatLoading(false);
     }
   }
 }
