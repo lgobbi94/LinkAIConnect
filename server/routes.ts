@@ -170,7 +170,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           { role: "user", content: message },
           { role: "system", content: `Here is some information from the PDF: ${pdfText}` },
         ],
-        max_tokens: 150,
+        max_tokens: 500,
       });
 
       const aiResponse =
