@@ -62,8 +62,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen overflow-auto">
-      <div className="md:max-w-7xl mx-auto pt-20 px-4 md:flex md:flex-row md:gap-8">
-        <div className="md:w-1/2">
+      <div className="max-w-7xl mx-auto pt-20 px-4">
         <ProfilePicture />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -189,9 +188,57 @@ export default function Home() {
           </div>
         </motion.div>
 
+        {/* Chat Section */}
+        <div className="mb-12">
+          <div className="w-full relative cosmic-scene" style={{ minHeight: "400px" }}>
+            <div className="absolute inset-0 flex flex-col items-center justify-start p-4" style={{ zIndex: 20 }}>
+              <div className="w-full h-[300px] bg-slate-900/50 backdrop-blur-sm rounded-lg p-4 overflow-y-auto mb-4">
+                {messages.map((message, i) => (
+                  <div
+                    key={i}
+                    className={`flex ${message.role === "assistant" ? "justify-start" : "justify-end"} mb-2`}
+                  >
+                    <div
+                      className={`max-w-[80%] p-3 rounded-xl ${
+                        message.role === "assistant" 
+                          ? "bg-slate-800/80 text-violet-300" 
+                          : "bg-violet-600/80 text-white"
+                      }`}
+                    >
+                      {message.content}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="w-full flex gap-2">
+                <input
+                  type="text"
+                  value={input}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
+                  onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => {
+                    if (e.key === "Enter") {
+                      e.preventDefault();
+                      handleSend();
+                    }
+                  }}
+                  placeholder="Ask me anything..."
+                  className="flex-1 bg-slate-800/80 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-violet-500"
+                />
+                <button
+                  onClick={handleSend}
+                  disabled={chatLoading}
+                  className="bg-violet-600 hover:bg-violet-700 text-white px-4 py-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {chatLoading ? "Sending..." : "Send"}
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="md:w-1/2 md:mt-0 mt-8">
-          <div className="space-y-4">
+
+        {/* Links Section */}
+        <div className="space-y-4">
             {isLoading
               ? Array.from({ length: 5 }).map((_, i) => (
                   <div
