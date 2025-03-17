@@ -2,7 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 import React, { useState, useRef, useEffect, ChangeEvent, KeyboardEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import LinkButton from "@/components/linktree/LinkButton";
-import LinkButton from "@/components/linktree/LinkButton";
 import type { Link, ChatConfig } from "@shared/schema";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
