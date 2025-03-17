@@ -61,9 +61,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen overflow-auto">
-      <div className="max-w-7xl mx-auto pt-20 px-4">
-        <div className="md:flex md:gap-8">
+    <div className="min-h-screen overflow-auto bg-gradient-to-b from-slate-900 to-slate-800">
+      <div className="max-w-7xl mx-auto pt-10 px-4">
+        <div className="md:flex md:gap-12 md:items-start">
           <ProfilePicture />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -85,17 +85,17 @@ export default function Home() {
           <div className="mb-12">
             <div className="w-full relative cosmic-scene" style={{ minHeight: "400px" }}>
               <div className="absolute inset-0 flex flex-col items-center justify-start p-4" style={{ zIndex: 20 }}>
-                <div className="w-full h-[300px] bg-slate-900/50 backdrop-blur-sm rounded-lg p-4 overflow-y-auto mb-4">
+                <div className="w-full h-[400px] bg-slate-900/70 backdrop-blur-lg rounded-xl p-6 overflow-y-auto mb-4 border border-slate-700/50 shadow-xl">
                   {messages.map((message, i) => (
                     <div
                       key={i}
                       className={`flex ${message.role === "assistant" ? "justify-start" : "justify-end"} mb-2`}
                     >
                       <div
-                        className={`max-w-[80%] p-3 rounded-xl ${
+                        className={`max-w-[80%] p-4 rounded-xl shadow-lg ${
                           message.role === "assistant" 
-                            ? "bg-slate-800/80 text-violet-300" 
-                            : "bg-violet-600/80 text-white"
+                            ? "bg-slate-800/90 text-violet-300 border border-slate-700/50" 
+                            : "bg-violet-600/90 text-white border border-violet-500/50"
                         }`}
                       >
                         {message.content}
@@ -116,7 +116,7 @@ export default function Home() {
                       }
                     }}
                     placeholder="Ask me anything..."
-                    className="flex-1 bg-slate-800/80 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-violet-500"
+                    className="flex-1 bg-slate-800/90 text-white rounded-xl px-6 py-3 focus:outline-none focus:ring-2 focus:ring-violet-500 border border-slate-700/50 shadow-lg transition-all duration-200 hover:bg-slate-800/70"
                   />
                   <button
                     onClick={handleSend}
