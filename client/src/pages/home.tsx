@@ -62,8 +62,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen overflow-auto">
-      <div className="md:max-w-6xl mx-auto pt-20 px-4 md:flex md:flex-row md:gap-8">
-        <div className="md:w-1/3">
+      <div className="md:max-w-7xl mx-auto pt-20 px-4 md:flex md:flex-row md:gap-8">
+        <div className="md:w-1/2">
         <ProfilePicture />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -113,7 +113,7 @@ export default function Home() {
               <div className="nebula-2"></div>
             </div>
             
-            <div className="h-96 w-full relative cosmic-scene max-w-md" style={{ zIndex: 10 }}>
+            <div className="h-96 w-full relative cosmic-scene" style={{ zIndex: 10 }}>
               <div className="absolute inset-0 flex flex-col items-center justify-start p-4" style={{ zIndex: 20 }}>
                 <div className="w-full h-[300px] bg-slate-900/50 backdrop-blur-sm rounded-lg p-4 overflow-y-auto mb-4">
                   {messages.map((message, i) => (
@@ -190,7 +190,7 @@ export default function Home() {
         </motion.div>
 
         </div>
-        <div className="md:w-2/3 md:mt-0 mt-8">
+        <div className="md:w-1/2 md:mt-0 mt-8">
           <div className="space-y-4">
             {isLoading
               ? Array.from({ length: 5 }).map((_, i) => (
