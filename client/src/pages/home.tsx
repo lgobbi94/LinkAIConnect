@@ -61,8 +61,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen overflow-auto">
-      <div className="max-w-7xl mx-auto pt-20 px-4">
+    <div className="min-h-screen overflow-auto flex items-center justify-center">
+      <div className="max-w-7xl w-full px-4">
         <>
           <ProfilePicture />
           <motion.div
