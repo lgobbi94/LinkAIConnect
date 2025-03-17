@@ -63,7 +63,7 @@ export default function Home() {
   return (
     <div className="min-h-screen overflow-auto">
       <div className="max-w-7xl mx-auto pt-20 px-4">
-        <>
+        <div className="md:flex md:gap-8">
           <ProfilePicture />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -153,7 +153,7 @@ export default function Home() {
                   </motion.div>
                 ))}
             </div>
-        </>
+        </div>
       </div>
     </div>
   );
