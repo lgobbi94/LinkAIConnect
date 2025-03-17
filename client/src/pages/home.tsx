@@ -112,8 +112,8 @@ export default function Home() {
               <div className="nebula-2"></div>
             </div>
             
-            <div className="h-96 w-full relative cosmic-scene max-w-md">
-              <div className="absolute inset-0 flex flex-col items-center justify-start p-4">
+            <div className="h-96 w-full relative cosmic-scene max-w-md" style={{ zIndex: 10 }}>
+              <div className="absolute inset-0 flex flex-col items-center justify-start p-4" style={{ zIndex: 20 }}>
                 <div className="w-full h-[300px] bg-slate-900/50 backdrop-blur-sm rounded-lg p-4 overflow-y-auto mb-4">
                   {messages.map((message, i) => (
                     <div
@@ -168,7 +168,7 @@ export default function Home() {
                     top: `${Math.random() * 100}%`,
                     left: `${Math.random() * 100}%`,
                     boxShadow: '0 0 8px 2px rgba(255, 255, 255, 0.3)',
-                    zIndex: Math.random() > 0.5 ? 1 : -1,
+                    zIndex: 1,
                   }}
                   animate={{
                     y: [0, Math.random() * 40 - 20],
