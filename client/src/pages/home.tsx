@@ -8,6 +8,17 @@ import { apiRequest } from "@/lib/queryClient";
 import { ProfilePicture } from "@/components/ProfilePicture";
 
 export default function Home() {
+  // Chat functionality state
+  const [messages, setMessages] = useState<Array<{ role: "user" | "assistant"; content: string }>>([]);
+  const [input, setInput] = useState("");
+  const [chatLoading, setChatLoading] = useState(false);
+  const { toast } = useToast();
+
+  // API config query
+  const { data: config } = useQuery<ChatConfig>({
+    queryKey: ["/api/chat/config"],
+  });
+
   const { data: links, isLoading } = useQuery<Link[]>({
     queryKey: ["/api/links"],
   });
@@ -186,16 +197,7 @@ export default function Home() {
     </div>
   );
 
-  // Chat functionality
-  const [messages, setMessages] = useState<Array<{ role: "user" | "assistant"; content: string }>>([]);
-  const [input, setInput] = useState("");
-  const [chatLoading, setChatLoading] = useState(false);
-  const { toast } = useToast();
-
-  // API config query
-  const { data: config } = useQuery<ChatConfig>({
-    queryKey: ["/api/chat/config"],
-  });
+  
 
   async function handleSend() {
     if (!input.trim() || chatLoading) return;
